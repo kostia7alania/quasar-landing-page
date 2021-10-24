@@ -95,7 +95,7 @@
   "i18n-ally.keystyle": "nested",
   "cSpell.language": "ru,en-US,ru-RU,en-GB,en",
   "cSpell.enableFiletypes": ["dotenv", "vue", "vue-html"],
-  "cSpell.words": ["autoliker"],
+  "cSpell.words": ["icongenie"],
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

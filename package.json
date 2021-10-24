@@ -7,7 +7,11 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "build": "quasar build",
+    "ssr": "quasar build -m ssr",
+    "pwa": "quasar build -m pwa",
+    "icon": "icongenie generate -m pwa -i src/assets/logo.png"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
@@ -28,7 +32,8 @@
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-vue": "^7.0.0",
-    "postcss": "^8.1.0"
+    "postcss": "^8.1.0",
+    "workbox-webpack-plugin": "^6.0.0"
   },
   "browserslist": [
     "last 10 Chrome versions",

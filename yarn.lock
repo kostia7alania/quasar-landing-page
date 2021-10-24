@@ -2771,6 +2771,13 @@ dom-serializer@^1.0.1:
     domhandler "^4.2.0"
     entities "^2.0.0"
 
+dom7@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/dom7/-/dom7-4.0.0.tgz#69c8fb9b170c92d64f385fdc37f81456e82b80a1"
+  integrity sha512-xOJ0LAHFwktyj8Xljz4R2wzRI+Y9mR0plkMP0WlqtwqAkqn/vbdAyRifiW/w8mXe17LGktntcAwsQ5fKVDBNYg==
+  dependencies:
+    ssr-window "^4.0.0"
+
 domelementtype@^2.0.1, domelementtype@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-2.2.0.tgz#9a0b6c2782ed6a1c7323d42267183df9bd8b1d57"
@@ -5792,6 +5799,11 @@ sprintf-js@~1.0.2:
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
+ssr-window@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-4.0.0.tgz#4ee82fc360c5f88a022f321740bcfec59ada1a61"
+  integrity sha512-qCg6wJNeGNTVcPK2KFNfwtHU1gA3UZDZdxogu+Ys5+Ue5PMOENxUb7sscpAWWo4mWOBkJRCwQ50IlyA7qZ0hxw==
+
 stable@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/stable/-/stable-0.1.8.tgz#836eb3c8382fe2936feaf544631017ce7d47a3cf"
@@ -5902,6 +5914,14 @@ svgo@^2.3.0:
     csso "^4.2.0"
     nanocolors "^0.1.12"
     stable "^0.1.8"
+
+swiper@^7.0.9:
+  version "7.0.9"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-7.0.9.tgz#61d2cb64c759f1cc3bf85dd924dd46614a8d4795"
+  integrity sha512-Gw2ZCQWYYxDf3BnO50LwFdLT2LRzacgXCgsx8HtgBLHBYx4gAxDJGvuh1/04v9OxJNgE47gDV0FTgEqju1dh0w==
+  dependencies:
+    dom7 "^4.0.0"
+    ssr-window "^4.0.0"
 
 table@6.7.2, table@^6.0.9:
   version "6.7.2"

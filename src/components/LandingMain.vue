@@ -1,6 +1,9 @@
 <template>
   <!-- section 1 -->
-  <section class="section-1 tw-flex tw-flex-col tw-justify-center">
+  <section
+    id="section-1"
+    class="tw-flex tw-flex-col tw-justify-center bg-gray-1"
+  >
     <div class="tw-font-bold tw-text-5.5xl tw-mt-28 tw-text-center">
       Fire Phoenix Trading L.L.C
     </div>
@@ -19,7 +22,7 @@
     </div>
   </section>
   <!-- section 2 -->
-  <section class="section-2 tw-flex tw-justify-center">
+  <section id="section-2" class="tw-flex tw-justify-center">
     <div class="content-width tw-flex tw-justify-center tw-flex-col">
       <div class="tw-flex tw-mt-28">
         <div class="tw-flex-1 tw-font-bold tw-text-4.5xl">About us</div>
@@ -93,7 +96,8 @@
     section 3
     -->
   <section
-    class="section-3 bg-cotton-boll tw-flex tw-justify-center tw-py-20 tw-my-14"
+    id="section-3"
+    class="bg-cotton-boll tw-flex tw-justify-center tw-py-20 tw-my-14"
   >
     <div class="content-width tw-flex tw-justify-center tw-flex-col">
       <div class="">
@@ -168,7 +172,7 @@
   <!--
     section 4
     -->
-  <section class="section-3 tw-flex tw-justify-center tw-py-12">
+  <section id="section-4" class="tw-flex tw-justify-center tw-py-12 tw-mb-14">
     <div class="content-width tw-flex tw-justify-center tw-flex-col">
       <div>
         <div class="tw-font-bold tw-text-4.5xl">Technical team</div>
@@ -555,11 +559,8 @@
     section 5
     -->
   <section
-    class="
-      section-3
-      bg-cotton-boll
-      tw-flex tw-justify-center tw-leading-6 tw-py-28 tw-mt-14
-    "
+    id="section-5"
+    class="bg-cotton-boll tw-flex tw-justify-center tw-leading-6 tw-pt-28"
     style="letter-spacing: -0.5px"
   >
     <div class="content-width">
@@ -611,7 +612,9 @@
             </div>
           </div>
           <!-- card 4 -->
-          <div class="tw-bg-white tw-p-7 tw-mt-9 tw-rounded-lg">SLIDER</div>
+          <div class="tw-mt-9 tw-rounded-lg">
+            <SliderSection />
+          </div>
 
           <!-- card 5 -->
           <div class="tw-bg-white tw-p-7 tw-mt-9 tw-rounded-lg">
@@ -677,7 +680,7 @@
   <!--
     section 6
     -->
-  <section>
+  <section id="section-6" class="bg-cotton-boll tw-pt-28">
     <div class="tw-flex tw-justify-center">
       <img
         class="tw-w-full"
@@ -692,7 +695,7 @@
     -->
   <footer class="text-gray-3 tw-flex tw-items-center">
     <div class="content-width tw-m-auto tw-my-8">
-      © 2020 Fire Phoenix Trading L.L.C, Inc. All rights reserved.
+      © 2021 Fire Phoenix Trading L.L.C, Inc. All rights reserved.
     </div>
   </footer>
 </template>
@@ -713,6 +716,7 @@ import IconProgress from './IconProgress.vue';
 import IconTeamBuilding from './IconTeamBuilding.vue';
 import IconLunch from './IconLunch.vue';
 import IconHotel from './IconHotel.vue';
+import SliderSection from './SliderSection.vue';
 
 export default defineComponent({
   name: 'LandingMain',
@@ -730,6 +734,7 @@ export default defineComponent({
     IconTeamBuilding,
     IconLunch,
     IconHotel,
+    SliderSection,
   },
   computed: {
     // companyCeiling() {
@@ -740,10 +745,6 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.section-1 {
-  background: #f7f9fb;
-}
-
 .content-width {
   width: 100%;
   max-width: 1110px;

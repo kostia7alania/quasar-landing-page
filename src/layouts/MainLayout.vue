@@ -1,5 +1,5 @@
 <template>
-  <div class="main-layout tw-mx-auto">
+  <q-layout ref="layout" @scroll="scrollHandler" class="main-layout tw-mx-auto">
     <header class="app-header tw-flex tw-items-center tw-justify-between">
       <!-- left -->
       <div class="tw-ml-14">
@@ -33,19 +33,19 @@
         </svg>
       </div>
       <!-- center -->
-      <div
-        class="links tw-font-bold tw-flex"
-        style="max-width: 1110px; column-gap: 40px"
-      >
-        <div class="link-item" v-for="link in links" :key="link">
-          <div
-            @click="setActiveLink(link)"
-            :class="{ 'link--active': link === activeLink }"
-          >
-            {{ link }}
+      <nav class="navbar tw-font-bold" style="max-width: 1110px">
+        <ul class="navbar-items tw-flex" style="column-gap: 40px">
+          <div class="link-item" v-for="[link, id] in links" :key="link">
+            <a
+              :class="{ 'link--active': id === activeLink }"
+              :href="id"
+              @click.prevent="scrollToLink(id)"
+            >
+              {{ link }}
+            </a>
           </div>
-        </div>
-      </div>
+        </ul>
+      </nav>
       <!-- right -->
       <div class="tw-mr-14">
         <button
@@ -59,33 +59,93 @@
     <main class="app-main">
       <router-view />
     </main>
-  </div>
+  </q-layout>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 // import '../extensions/tailwindcss/tailwind.css';
 
+import { IScroll } from 'src/typings/quasarModels';
+
+import { scroll } from 'quasar';
+const { getScrollTarget, setVerticalScrollPosition } = scroll;
+
+// takes an element object
+function scrollToElement(el: HTMLElement) {
+  const target = getScrollTarget(el);
+  const offset = el.offsetTop;
+  const duration = 1000;
+  setVerticalScrollPosition(target, offset, duration);
+}
+
+const linksMap = [
+  'Top',
+  'About Us',
+  'Technology Products',
+  'Team',
+  'Join Us',
+  'Contacts',
+].map((e, i) => [e, `#section-${i + 1}`]);
+
 export default defineComponent({
   name: 'MainLayout',
 
   setup() {
-    const links = ref([
-      'Top',
-      'About Us',
-      'Technology Products',
-      'Team',
-      'Join Us',
-      'Contacts',
-    ]);
-    const activeLink = ref('Top');
+    const links = ref(linksMap);
+    const activeLink = ref('#section-1');
+
+    const setActiveLink = (val: string) => {
+      activeLink.value = val;
+    };
 
     return {
       links,
       activeLink,
-      setActiveLink(val: string) {
-        activeLink.value = val;
+      scrollToLink(val: string) {
+        const domEl = document.querySelector(val) as HTMLElement;
+        scrollToElement(domEl);
+        setActiveLink(val);
       },
+      setActiveLink,
+    };
+  },
+  methods: {
+    scrollHandler(e: IScroll) {
+      /*
+        delta: -3.33349609375
+        direction: "up"
+        directionChanged: false
+        inflectionPoint: 7459.16650390625
+        position: 7335.8330078125
+      */
+      linksMap.forEach(([, sectionSelector]) => {
+        const sectionDom = document.querySelector(
+          sectionSelector
+        ) as HTMLElement;
+
+        const { offsetTop: sectionTop, clientHeight: sectionHeight } =
+          sectionDom;
+        if (e.position >= sectionTop - 100 - sectionHeight / 3) {
+          this.setActiveLink(sectionSelector);
+        }
+        // console.log('scrollHandler', {
+        //   sectionSelector,
+        //   position: e.position,
+        //   sectionTop,
+        //   sectionHeight,
+        //   res1: sectionTop - sectionHeight,
+        //   res2: sectionTop - sectionHeight / 2,
+        //   res3: sectionTop - sectionHeight / 3,
+        // });
+      });
+
+      // window.pageYOffset => is => e.position
+    },
+  },
+  data() {
+    return {
+      scroll,
     };
   },
 });
@@ -98,13 +158,15 @@ export default defineComponent({
 
 .app-header {
   height: 99px;
+  position: sticky;
+  top: 0;
+  z-index: 1111;
+  background: white;
 }
 
 .link {
   line-height: 21px;
   letter-spacing: -0.6px;
-}
-.link-item {
 }
 
 .box-shadow-1 {

@@ -11,7 +11,10 @@
     "build": "quasar build",
     "ssr": "quasar build -m ssr",
     "pwa": "quasar build -m pwa",
-    "icon": "icongenie generate -m pwa -i src/assets/logo.png"
+    "icon": "icongenie generate -m pwa -i src/assets/logo.png",
+    "build:ssg": "quasar ssg generate",
+    "serve:ssg": "quasar ssg serve dist/ssg",
+    "deploy": "surge dist/pwa living-canvas.surge.sh"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",

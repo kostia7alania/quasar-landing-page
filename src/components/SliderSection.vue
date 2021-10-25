@@ -123,8 +123,14 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-color: rgb(255 255 255 / 20%);
+  // anim
+  transition: 0.3s;
   &:hover {
     background-color: #416ff4;
+  }
+  &:active {
+    transition: 0.2s;
+    transform: scale(0.9);
   }
 
   &::after {

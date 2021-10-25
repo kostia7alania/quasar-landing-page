@@ -104,5 +104,8 @@ export default defineComponent({
   &:hover {
     transform: rotate(360deg);
   }
+  &:active {
+    transform: rotate(-360deg);
+  }
 }
 </style>

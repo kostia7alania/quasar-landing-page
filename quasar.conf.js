@@ -132,7 +132,7 @@ module.exports = configure(function (ctx) {
         'render', // keep this as last one
       ],
     },
-
+    transpile: ['gsap'],
     // https://quasar.dev/quasar-cli/developing-pwa/configuring-pwa
     pwa: {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'

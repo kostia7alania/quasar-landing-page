@@ -701,6 +701,7 @@
 </template>
 
 <script lang="ts">
+import { doAnimate } from '../compositions/doAnimate';
 import { defineComponent } from 'vue';
 
 import BlockChainCartoon from './BlockChainCartoon.vue';
@@ -740,6 +741,9 @@ export default defineComponent({
     // companyCeiling() {
     //   return require('@/assets/images/company-ceiling.jpg');
     // },
+  },
+  mounted() {
+    doAnimate();
   },
 });
 </script>

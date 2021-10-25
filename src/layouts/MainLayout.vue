@@ -6,29 +6,25 @@
       @scrollToLink="scrollToLink"
     />
     <main class="app-main">
-      <router-view />
+      <PerfectScrollbar @ps-scroll-y="onScroll" ref="scrollbar">
+        <router-view />
+      </PerfectScrollbar>
     </main>
   </q-layout>
 </template>
 
 <script lang="ts">
+import { PerfectScrollbar } from 'vue3-perfect-scrollbar';
+import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css';
+
 import MainHeader from './components/MainHeader.vue';
 
-import { defineComponent, ref } from 'vue';
-// import '../extensions/tailwindcss/tailwind.css';
+import { defineComponent, ref, onMounted, SetupContext } from 'vue';
 
 import { IScroll } from 'src/typings/quasarModels';
 
 import { scroll } from 'quasar';
 const { getScrollTarget, setVerticalScrollPosition } = scroll;
-
-// takes an element object
-function scrollToElement(el: HTMLElement) {
-  const target = getScrollTarget(el);
-  const offset = el.offsetTop;
-  const duration = 1000;
-  setVerticalScrollPosition(target, offset, duration);
-}
 
 const linksMap = [
   'Top',
@@ -41,8 +37,11 @@ const linksMap = [
 
 export default defineComponent({
   name: 'MainLayout',
-  components: { MainHeader },
-  setup() {
+  props: {
+    scroll: Object,
+  },
+  components: { MainHeader, PerfectScrollbar },
+  setup(_, ctx: SetupContext) {
     const links = ref(linksMap);
     const activeLink = ref('#section-1');
 
@@ -50,24 +49,17 @@ export default defineComponent({
       activeLink.value = val;
     };
 
-    return {
-      links,
-      activeLink,
-      scrollToLink(val: string) {
-        const domEl = document.querySelector(val) as HTMLElement;
-        scrollToElement(domEl);
-        setActiveLink(val);
-      },
-      setActiveLink,
-    };
-  },
-  data() {
-    return {
-      scroll,
-    };
-  },
-  methods: {
-    scrollHandler(e: IScroll) {
+    interface IRef {
+      $el: HTMLElement;
+    }
+    const scrollbar = ref<IRef | HTMLElement | null | HTMLInputElement>(null);
+    onMounted(() => {
+      // the DOM element will be assigned to the ref after initial render
+      // const el = res?.$el;
+      // console.log(el, scrollbar.value); // <div>This is a root element</div>
+    });
+
+    const scrollHandler = ({ position }: IScroll) => {
       /*
         delta: -3.33349609375
         direction: "up"
@@ -82,8 +74,8 @@ export default defineComponent({
 
         const { offsetTop: sectionTop, clientHeight: sectionHeight } =
           sectionDom;
-        if (e.position >= sectionTop - 100 - sectionHeight / 3) {
-          this.setActiveLink(sectionSelector);
+        if (position >= sectionTop - 100 - sectionHeight / 3) {
+          setActiveLink(sectionSelector);
         }
         // console.log('scrollHandler', {
         //   sectionSelector,
@@ -95,9 +87,42 @@ export default defineComponent({
         //   res3: sectionTop - sectionHeight / 3,
         // });
       });
-
       // window.pageYOffset => is => e.position
-    },
+    };
+    // takes an element object
+    function scrollToElement(el: HTMLElement) {
+      const target = getScrollTarget(el);
+      const offset = el.offsetTop;
+      const duration = 1000;
+
+      // const res3 = scrollbar.value as IRef; // ?.$el; // ?.scrollTop;
+      // res3.$el.scrollTop = offset;
+      console.log(target);
+      const targ = document.querySelector('.ps') as HTMLElement;
+      setVerticalScrollPosition(targ, offset, duration);
+    }
+
+    return {
+      scrollbar,
+      links,
+      activeLink,
+      scrollToLink(val: string) {
+        const domEl = document.querySelector(val) as HTMLElement;
+        scrollToElement(domEl);
+        setActiveLink(val);
+      },
+      setActiveLink,
+
+      onScroll(event: Event) {
+        // debugger;
+        const res = scrollbar.value as IRef; // ?.$el; // ?.scrollTop;
+        const el = +res.$el?.scrollTop;
+        const args = { position: el };
+        scrollHandler(args);
+        // const target = event.target as HTMLInputElement;
+        // console.log(el, target?.offsetHeight, arguments, event);
+      },
+    };
   },
 });
 </script>
@@ -105,5 +130,11 @@ export default defineComponent({
 <style lang="scss" scoped>
 .main-layout {
   max-width: 1920px;
+}
+</style>
+
+<style>
+.ps {
+  height: calc(100vh - 99px);
 }
 </style>

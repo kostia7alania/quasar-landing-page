@@ -86,7 +86,7 @@
               src="../assets/images/office-location.png"
               alt="Company Ceiling"
             /> -->
-            <MapTop />
+            <MapTop style="height: 200px" />
           </div>
         </div>
       </div>
@@ -689,11 +689,12 @@
     -->
   <section id="section-6" class="bg-cotton-boll tw-pt-28">
     <div class="tw-flex tw-justify-center">
-      <img
+      <!-- <img
         class="tw-w-full"
         src="../assets/images/map-bottom.png"
         alt="Contacts Map"
-      />
+      /> -->
+      <MapTop class="tw-w-full" style="height: 754px" />
     </div>
   </section>
 

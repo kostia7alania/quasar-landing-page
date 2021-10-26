@@ -1,7 +1,6 @@
 <template>
-  <div style="height: 200px; width: 100%">
+  <div style="width: 100%">
     <l-map
-      style="height: 200px"
       ref="map"
       :zoom="zoom"
       :center="center"
@@ -38,7 +37,7 @@
         :lat-lng="[center[0], center[1]]"
       >
         <l-popup class="leaflet-popup-component">
-          <Contacts />
+          <Contacts class="tw-py-4 tw-text-left tw-px-6" />
         </l-popup>
       </l-marker>
       <l-marker :lat-lng="[51, 6]" :icon="currentAccoIcon"></l-marker>

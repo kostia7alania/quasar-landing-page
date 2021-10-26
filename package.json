@@ -15,7 +15,7 @@
     "icon": "icongenie generate -m pwa -i src/assets/logo.png",
     "build:ssg": "quasar ssg generate",
     "serve:ssg": "quasar ssg serve dist/ssg",
-    "deploy": "yarn pwa && surge dist/pwa living-canvas.surge.sh"
+    "deploy": "yarn build && surge dist/spa living-canvas.surge.sh"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",

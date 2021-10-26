@@ -64,7 +64,8 @@ export default {
 
 <style lang="scss">
 .swiper {
-  width: 730px;
+  // width: 730px;
+  width: 100%;
   height: 480px;
 }
 

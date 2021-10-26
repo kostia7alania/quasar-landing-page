@@ -1,25 +1,22 @@
 <template>
-  <q-layout ref="layout" @scroll="scrollHandler" class="main-layout tw-mx-auto">
-    <MainHeader
-      :links="links"
-      :activeLink="activeLink"
-      @scrollToLink="scrollToLink"
-    />
-    <main class="app-main">
-      <PerfectScrollbar @ps-scroll-y="onScroll" ref="scrollbar">
-        <router-view />
-      </PerfectScrollbar>
-    </main>
-  </q-layout>
+  <div class="tw-sticky tw-top-6" style="letter-spacing: -0.528px">
+    <div
+      class="tw-my-4"
+      v-for="[link, id] in links"
+      :key="link"
+      :class="{
+        'link--active tw-font-bold': id === activeLink,
+        'tw-cursor-pointer': id !== activeLink,
+      }"
+      @click.prevent="scrollToLink(id)"
+    >
+      {{ link }}
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
-import { PerfectScrollbar } from 'vue3-perfect-scrollbar';
-import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css';
-
-import MainHeader from './components/MainHeader.vue';
-
-import { defineComponent, ref, onMounted /*, SetupContext*/ } from 'vue';
+import { defineComponent, ref, onMounted, onBeforeUnmount } from 'vue';
 
 import { IScroll } from 'src/typings/quasarModels';
 
@@ -27,37 +24,20 @@ import { scroll } from 'quasar';
 const { getScrollTarget, setVerticalScrollPosition } = scroll;
 
 const linksMap = [
-  'Top',
-  'About Us',
-  'Technology Products',
-  'Team',
-  'Join Us',
-  'Contacts',
-].map((e, i) => [e, `#section-${i + 1}`]);
+  'Our values',
+  'Open a multi-diverse office environment',
+  'Everyone has a growing opportunity',
+  'Company employee benefits',
+].map((e, i) => [e, `#sub-section-${i + 1}`]);
 
 export default defineComponent({
-  name: 'MainLayout',
-  props: {
-    scroll: Object,
-  },
-  components: { MainHeader, PerfectScrollbar },
-  setup(/*_, ctx: SetupContext*/) {
+  setup() {
     const links = ref(linksMap);
-    const activeLink = ref('#section-1');
+    const activeLink = ref('#sub-section-1');
 
     const setActiveLink = (val: string) => {
       activeLink.value = val;
     };
-
-    interface IRef {
-      $el: HTMLElement;
-    }
-    const scrollbar = ref<IRef | HTMLElement | null | HTMLInputElement>(null);
-    onMounted(() => {
-      // the DOM element will be assigned to the ref after initial render
-      // const el = res?.$el;
-      // console.log(el, scrollbar.value); // <div>This is a root element</div>
-    });
 
     const scrollHandler = ({ position }: IScroll) => {
       /*
@@ -89,6 +69,29 @@ export default defineComponent({
       });
       // window.pageYOffset => is => e.position
     };
+
+    const onScroll = (event: Event) => {
+      // debugger;
+      // const res = scrollbar.value; // ?.$el; // ?.scrollTop;
+      // const el = +res.$el?.scrollTop;
+      const target = event.target as HTMLInputElement;
+      const args = { position: target?.scrollTop };
+      scrollHandler(args);
+      // console.log(target?.scrollTop, arguments, event);
+    };
+
+    onMounted(() => {
+      // the DOM element will be assigned to the ref after initial render
+      // const el = res?.$el;
+      // console.log(el, scrollbar.value); // <div>This is a root element</div>
+      const targ = document.querySelector('.ps') as HTMLElement;
+      targ.addEventListener('scroll', onScroll);
+    });
+
+    onBeforeUnmount(() => {
+      const targ = document.querySelector('.ps') as HTMLElement;
+      targ.removeEventListener('scroll', onScroll);
+    });
     // takes an element object
     function scrollToElement(el: HTMLElement) {
       const target = getScrollTarget(el);
@@ -103,37 +106,15 @@ export default defineComponent({
     }
 
     return {
-      scrollbar,
       links,
       activeLink,
       scrollToLink(val: string) {
         const domEl = document.querySelector(val) as HTMLElement;
         scrollToElement(domEl);
-        setActiveLink(val);
-      },
-
-      onScroll(event: Event) {
-        // debugger;
-        const res = scrollbar.value as IRef; // ?.$el; // ?.scrollTop;
-        const el = +res.$el?.scrollTop;
-        const args = { position: el };
-        scrollHandler(args);
-        // const target = event.target as HTMLInputElement;
-        // console.log(el, target?.offsetHeight, arguments, event);
+        // setActiveLink(val);
       },
     };
   },
+  name: 'ChatSoftwareCartoon',
 });
 </script>
-
-<style lang="scss" scoped>
-.main-layout {
-  max-width: 1920px;
-}
-</style>
-
-<style>
-.ps {
-  height: calc(100vh - 99px);
-}
-</style>

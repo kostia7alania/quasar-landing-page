@@ -582,16 +582,16 @@
       </div>
 
       <!-- row -->
-      <div class="tw-flex tw-justify-between tw-text-left tw-mt-16">
-        <div class="tw-text-lg text-gray-1" style="flex-basis: 400px">
-          <div class="link--active tw-font-bold tw-my-4">Our values</div>
-          <div class="tw-my-4">Open a multi-diverse office environment</div>
-          <div class="tw-my-4">Everyone has a growing opportunity</div>
-          <div class="tw-my-4">Company employee benefits</div>
+      <div class="tw-flex tw-justify-between tw-text-left tw-gap-x-3 tw-mt-16">
+        <div
+          class="tw-text-lg text-gray-1 tw-relative"
+          style="flex-basis: 444px"
+        >
+          <ValuesScrollLinks />
         </div>
-        <div style="max-width: 748px">
+        <div style="max-width: 717px">
           <!-- card 1 -->
-          <div class="tw-bg-white tw-p-7 tw-rounded-lg">
+          <div id="sub-section-1" class="tw-bg-white tw-p-7 tw-rounded-lg">
             <JoinPerformanceCartoon />
             <div class="tw-text-2xl tw-font-bold" style="max-width: 478px">
               Today's performance is the lowest requirements tomorrow
@@ -612,12 +612,15 @@
             </div>
           </div>
           <!-- card 4 -->
-          <div class="tw-mt-9 tw-rounded-lg">
+          <div id="sub-section-2" class="tw-mt-9 tw-rounded-lg">
             <SliderSection />
           </div>
 
           <!-- card 5 -->
-          <div class="tw-bg-white tw-p-7 tw-mt-9 tw-rounded-lg">
+          <div
+            id="sub-section-3"
+            class="tw-bg-white tw-p-7 tw-mt-9 tw-rounded-lg"
+          >
             <div class="tw-flex tw-items-center tw-text-2xl tw-font-bold">
               <IconPromotion />
               <div class="tw-ml-6">Promotion</div>
@@ -643,7 +646,10 @@
             </div>
           </div>
           <!-- card 7 -->
-          <div class="tw-bg-white tw-p-7 tw-py-12 tw-mt-9 tw-rounded-lg">
+          <div
+            id="sub-section-4"
+            class="tw-bg-white tw-p-7 tw-py-12 tw-mt-9 tw-rounded-lg"
+          >
             <div class="tw-flex tw-items-center tw-text-2xl tw-font-bold">
               <IconTeamBuilding />
               <div class="tw-ml-6">Team building</div>
@@ -702,22 +708,27 @@
 
 <script lang="ts">
 import { doAnimate } from '../compositions/doAnimate';
-import { defineComponent } from 'vue';
+import { defineComponent, defineAsyncComponent } from 'vue';
 
-import BlockChainCartoon from './BlockChainCartoon.vue';
-import BlockChainCartoonIcon from './BlockChainCartoonIcon.vue';
-import ChatSoftwareCartoon from './ChatSoftwareCartoon.vue';
-import ChatSoftwareCartoonIcon from './ChatSoftwareCartoonIcon.vue';
+import BlockChainCartoon from './cartoons/BlockChainCartoon.vue';
+import BlockChainCartoonIcon from './icons/BlockChainCartoonIcon.vue';
+import ChatSoftwareCartoon from './cartoons/ChatSoftwareCartoon.vue';
+import ChatSoftwareCartoonIcon from './icons/ChatSoftwareCartoonIcon.vue';
 import OnlineGameCartoon from './OnlineGameCartoon.vue';
-import JoinPerformanceCartoon from './JoinPerformanceCartoon.vue';
-import JoinHappyLifeCartoon from './JoinHappyLifeCartoon.vue';
-import JoinChangeLifeCartoon from './JoinChangeLifeCartoon.vue';
-import IconPromotion from './IconPromotion.vue';
-import IconProgress from './IconProgress.vue';
-import IconTeamBuilding from './IconTeamBuilding.vue';
-import IconLunch from './IconLunch.vue';
-import IconHotel from './IconHotel.vue';
-import SliderSection from './SliderSection.vue';
+import JoinPerformanceCartoon from './cartoons/JoinPerformanceCartoon.vue';
+import JoinHappyLifeCartoon from './cartoons/JoinHappyLifeCartoon.vue';
+import JoinChangeLifeCartoon from './cartoons/JoinChangeLifeCartoon.vue';
+import IconPromotion from './icons/IconPromotion.vue';
+import IconProgress from './icons/IconProgress.vue';
+import IconTeamBuilding from './icons/IconTeamBuilding.vue';
+import IconLunch from './icons/IconLunch.vue';
+import IconHotel from './icons/IconHotel.vue';
+
+const SliderSection = defineAsyncComponent(() => import('./SliderSection.vue'));
+
+const ValuesScrollLinks = defineAsyncComponent(
+  () => import('./ValuesScrollLinks.vue')
+);
 
 export default defineComponent({
   name: 'LandingMain',
@@ -736,6 +747,7 @@ export default defineComponent({
     IconLunch,
     IconHotel,
     SliderSection,
+    ValuesScrollLinks,
   },
   computed: {
     // companyCeiling() {
@@ -744,6 +756,11 @@ export default defineComponent({
   },
   mounted() {
     doAnimate();
+  },
+  methods: {
+    scrollHandler() {
+      console.log('scrollHandler');
+    },
   },
 });
 </script>

@@ -1,13 +1,16 @@
 <template>
-  <q-layout ref="layout" @scroll="scrollHandler" class="main-layout tw-mx-auto">
+  <q-layout ref="layout" @scroll="scrollHandler">
     <MainHeader
+      class="max-layout-width tw-mx-auto"
       :links="links"
       :activeLink="activeLink"
       @scrollToLink="scrollToLink"
     />
     <main class="app-main">
       <PerfectScrollbar @ps-scroll-y="onScroll" ref="scrollbar">
-        <router-view />
+        <div class="max-layout-width tw-mx-auto">
+          <router-view />
+        </div>
       </PerfectScrollbar>
     </main>
   </q-layout>
@@ -127,7 +130,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.main-layout {
+.max-layout-width {
   max-width: 1920px;
 }
 </style>

@@ -1,0 +1,185 @@
+<template>
+  <div style="height: 200px; width: 100%">
+    <l-map
+      style="height: 200px"
+      ref="map"
+      :zoom="zoom"
+      :center="center"
+      @update:zoom="zoomUpdated"
+      @ready="ready"
+    >
+      <l-tile-layer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      ></l-tile-layer>
+      <l-marker
+        :ref="'markerPoi' + marker.id"
+        name="poi-list-item"
+        v-for="marker in markerData"
+        :icon="defaultMarkerIcon"
+        :key="'poi' + marker.id"
+        :lat-lng="[marker.address_gps_lat, marker.address_gps_lon]"
+      ></l-marker>
+      <l-marker
+        name="accos-list-item"
+        :ref="'mapMarker' + marker.id"
+        v-for="marker in markerDataAccos"
+        :icon="currentAccoIcon"
+        :key="'acco' + marker.id"
+        :lat-lng="[marker.address_gps_lat, marker.address_gps_lon]"
+      >
+        <l-popup class="leaflet-popup-component">
+          <div>{{ marker.address_gps_lat }}</div>
+        </l-popup>
+      </l-marker>
+      <l-marker
+        name="accos-list-item"
+        :ref="'mapMarker' + 50"
+        :key="'current-accommodation'"
+        :lat-lng="[center[0], center[1]]"
+      >
+        <l-popup class="leaflet-popup-component">
+          <Contacts />
+        </l-popup>
+      </l-marker>
+      <l-marker :lat-lng="[51, 6]" :icon="currentAccoIcon"></l-marker>
+      <l-marker :lat-lng="[52, 7]" :icon="currentAccoIcon"></l-marker>
+      <l-marker :lat-lng="[53, 8]" :icon="currentAccoIcon"></l-marker>
+      <l-marker :lat-lng="[54, 9]" :icon="currentAccoIcon"></l-marker>
+    </l-map>
+  </div>
+</template>
+
+<script>
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/restrict-plus-operands */
+import L from 'leaflet';
+import { LMap, LTileLayer, LMarker, LPopup } from '@vue-leaflet/vue-leaflet';
+import 'leaflet/dist/leaflet.css';
+
+import Contacts from 'src/components/Contacts.vue';
+
+const lon = 55.37831427551369;
+const lat = 25.119574536556936;
+
+export default {
+  name: 'App',
+  components: {
+    LMap,
+    LTileLayer,
+    LMarker,
+    LPopup,
+    Contacts,
+  },
+  data() {
+    return {
+      zoom: 15,
+      center: [lat, lon],
+      defaultMarkerIcon: L.icon({
+        iconUrl: 'e.jpg',
+        iconSize: [150, 100],
+      }),
+      currentAccoIcon: L.icon({
+        iconUrl: 'g.jpg',
+        iconSize: [55, 25],
+      }),
+      markerData: [],
+      markerDataAccos: [],
+      markers: [],
+    };
+  },
+  methods: {
+    setFit() {
+      let bounds = L.latLngBounds(
+        L.featureGroup(this.getSearchedItemMarkers()).getBounds()
+      );
+      console.log('bounds', bounds);
+      this.map.fitBounds(bounds, { maxZoom: 13 });
+    },
+    zoomUpdated(zoom) {
+      this.zoom = zoom;
+      console.log({ zoom });
+    },
+    centerUpdated(center) {
+      this.center = center;
+    },
+    ready() {
+      this.map = this.$refs.map.leafletObject;
+      L.control.scale().addTo(this.map);
+      L.control.zoom({ position: 'topright' }).addTo(this.map);
+      this.map.scrollWheelZoom.disable();
+      this.map.zoomControl.remove();
+      this.map.on('popupclose', () => {
+        this.defaultMarkerIcon = L.icon({
+          iconUrl: 'e.jpg',
+          iconSize: [151, 158],
+        });
+        this.currentAccoIcon = L.icon({
+          iconUrl: 'g.jpg',
+          iconSize: [100, 158],
+        });
+      });
+      this.setFit();
+      // this.map.on('dragend', () => {
+      //   this.boundsUpdated(this.map.getBounds(), this.zoom - 3);
+      // });
+      // this.map.on('zoomend', () => {
+      //   this.boundsUpdated(this.map.getBounds(), this.zoom - 3);
+      // });
+    },
+    getSearchedItemMarkers() {
+      let markerArray = [];
+      markerArray = [
+        L.marker([lat, lon], { icon: this.icon }),
+        // L.marker([52, 7], { icon: this.icon }),
+        // L.marker([53, 8], { icon: this.icon }),
+        // L.marker([54, 9], { icon: this.icon }),
+      ];
+      return markerArray;
+    },
+    // boundsUpdated(bounds, zoom = this.zoom) {
+    //   this.getPois(bounds, zoom);
+    //   this.getAccommodations(bounds);
+    // },
+    getAccommodations(bounds) {
+      console.log('get accos');
+      setTimeout(() => {
+        this.markerDataAccos = this.randArray();
+      }, 1000);
+    },
+    getPois(bounds, zoom = this.zoom) {
+      console.log('getpois');
+      setTimeout(() => {
+        this.markerData = this.randArray();
+      }, 1000);
+    },
+    randArray() {
+      return [
+        {
+          id: Math.floor(Math.random() * 5000),
+          address_gps_lat: 25.119574536556936,
+          address_gps_lon: 55.37831427551369,
+        },
+        // {
+        //   id: Math.floor(Math.random() * 5000),
+        //   address_gps_lat: (Math.random() + 49).toFixed(2),
+        //   address_gps_lon: (Math.random() * 2 + 5).toFixed(2),
+        // },
+        // {
+        //   id: Math.floor(Math.random() * 5000),
+        //   address_gps_lat: (Math.random() + 49).toFixed(2),
+        //   address_gps_lon: Math.floor(Math.random()) + 5,
+        // },
+        // {
+        //   id: Math.floor(Math.random() * 5000),
+        //   address_gps_lat: (Math.random() + 49).toFixed(2),
+        //   address_gps_lon: (Math.random() * 2 + 5).toFixed(2),
+        // },
+      ];
+    },
+  },
+};
+</script>

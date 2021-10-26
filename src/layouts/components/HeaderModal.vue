@@ -8,27 +8,7 @@
     "
   >
     <!-- Add margin if you want to see some of the overlay behind the modal-->
-    <div class="tw-modal-content tw-py-4 tw-text-left tw-px-6">
-      <!--Title-->
-      <div class="tw-flex tw-justify-between tw-items-center tw-pb-3">
-        <div
-          style="letter-spacing: -1.584px; font-size: 48px"
-          class="tw-mt-2 tw-font-bold"
-        >
-          Contacts
-        </div>
-      </div>
-      <!--Body-->
-      <div class="text-black-2">Dubai</div>
-      <div class="tw-text-base tw-font-bold">
-        <div class="tw-mt-1">
-          <a href="tel:+97 156 870 1455">+97 156 870 1455</a>
-        </div>
-        <div class="tw-mt-1">
-          <a href="mailTo:accuratemeta@gmail.com">accuratemeta@gmail.com</a>
-        </div>
-      </div>
-    </div>
+    <Contacts class="tw-modal-content tw-py-4 tw-text-left tw-px-6" />
   </div>
 
   <!--Modal-->
@@ -65,9 +45,14 @@ interface IKeyboardEvent {
   keyCode: number;
 }
 
+import Contacts from 'src/components/Contacts.vue';
+
 export default defineComponent({
   name: 'HeaderModal',
   emits: ['close'],
+  components: {
+    Contacts,
+  },
   setup(_, { emit }: SetupContext) {
     const close = () => {
       emit('close');

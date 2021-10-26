@@ -1,5 +1,5 @@
 <template>
-  <q-layout ref="layout" @scroll="scrollHandler">
+  <q-layout ref="layout">
     <MainHeader
       class="max-layout-width tw-mx-auto"
       :links="links"
@@ -115,7 +115,7 @@ export default defineComponent({
         setActiveLink(val);
       },
 
-      onScroll(event: Event) {
+      onScroll(/*event: Event*/) {
         // debugger;
         const res = scrollbar.value as IRef; // ?.$el; // ?.scrollTop;
         const el = +res.$el?.scrollTop;

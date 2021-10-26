@@ -81,11 +81,12 @@
         </div>
         <div class="tw-flex-1 text-black-2 tw-m-4">
           <div class="tw-flex tw-justify-center">
-            <img
+            <!-- <img
               class="tw-h-30"
               src="../assets/images/office-location.png"
               alt="Company Ceiling"
-            />
+            /> -->
+            <MapTop />
           </div>
         </div>
       </div>
@@ -730,6 +731,8 @@ const ValuesScrollLinks = defineAsyncComponent(
   () => import('./ValuesScrollLinks.vue')
 );
 
+const MapTop = defineAsyncComponent(() => import('./MapTop.vue'));
+
 export default defineComponent({
   name: 'LandingMain',
   components: {
@@ -748,6 +751,7 @@ export default defineComponent({
     IconHotel,
     SliderSection,
     ValuesScrollLinks,
+    MapTop,
   },
   computed: {
     // companyCeiling() {
@@ -758,9 +762,9 @@ export default defineComponent({
     doAnimate();
   },
   methods: {
-    scrollHandler() {
-      console.log('scrollHandler');
-    },
+    // scrollHandler() {
+    //   console.log('scrollHandler');
+    // },
   },
 });
 </script>

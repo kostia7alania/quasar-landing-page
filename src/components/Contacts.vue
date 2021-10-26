@@ -13,7 +13,7 @@
     <div class="text-black-2">Dubai</div>
     <div class="tw-text-base tw-font-bold">
       <div class="tw-mt-1">
-        <a href="tel:+97 156 870 1455">+97 156 870 1455</a>
+        <a href="tel:+971 56 870 1455">+971 56 870 1455</a>
       </div>
       <div class="tw-mt-1">
         <a href="mailTo:accuratemeta@gmail.com">accuratemeta@gmail.com</a>

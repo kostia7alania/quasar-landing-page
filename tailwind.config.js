@@ -72,6 +72,9 @@ module.exports = {
       30: '7.5rem',
       31: '7.75rem',
       32: '8rem',
+      33: '8.25rem',
+      34: '8.5rem',
+      35: '8.75rem',
       36: '9rem',
       40: '10rem',
       44: '11rem',
@@ -84,6 +87,15 @@ module.exports = {
       72: '18rem',
       76: '19rem',
       80: '20rem',
+
+      // 81: '20.4rem',
+      // 82: '20.7rem',
+      // 83: '20.5rem',
+      84: '20.735rem',
+      // 85: '21rem',
+      // 88: '21.375rem',
+      // 88: '21.375rem',
+
       88: '22rem',
       96: '24rem',
     },
@@ -308,12 +320,14 @@ module.exports = {
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.25rem' }],
-      base: ['1rem', { lineHeight: '1.5rem' }],
-      lg: ['1.125rem', { lineHeight: '1.75rem' }],
+      base: ['1rem', { lineHeight: '1.5rem' }], // font-size: 18px
+      lg: ['1.125rem', { lineHeight: '1.75rem' }], // font-size: 20px
       xl: ['1.25rem', { lineHeight: '1.75rem' }],
       '2xl': ['1.5rem', { lineHeight: '2rem' }],
       '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+      '3.5xl': ['2rem', { lineHeight: '2.25rem' }], // font-size: 36px
       '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
+      '4.2xl': ['2.325rem', { lineHeight: '2.5rem' }],
       '4.5xl': ['2.625rem', { lineHeight: '2.5rem' }],
       '5xl': ['3rem', { lineHeight: '1' }],
       '5.5xl': ['3.375rem', { lineHeight: '1' }], // added

@@ -1,6 +1,7 @@
 <template>
+  <!-- height="410" -->
   <svg
-    height="410"
+    class="tw-mx-7 lg:tw-mx-0"
     viewBox="0 0 762 410"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

@@ -1,7 +1,8 @@
 <template>
+  <!-- width="144"
+    height="144" -->
   <svg
-    width="144"
-    height="144"
+    v-bind="$attrs"
     viewBox="0 0 144 144"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

@@ -2,32 +2,74 @@
   <!-- section 1 -->
   <section
     id="section-1"
-    class="tw-flex tw-flex-col tw-justify-center bg-gray-1"
+    class="tw-flex tw-flex-col tw-justify-center bg-cotton-boll-2"
   >
-    <div class="tw-font-bold tw-text-5.5xl tw-mt-28 tw-text-center">
-      Fire Phoenix Trading L.L.C
+    <div
+      class="
+        tw-font-bold tw-text-2 tw-text-3.5xl
+        md:tw-text-4.5xl
+        lg:tw-text-5xl
+        xl:tw-text-5.5xl
+        tw-mt-14
+        sm:tw-mt-16
+        md:tw-mt-20
+        lg:tw-mt-24
+        xl:tw-mt-28
+        tw-mx-12 tw-text-center
+      "
+    >
+      Fire Phoenix Trading&nbsp;L.L.C
     </div>
     <div
-      class="tw-m-auto tw-text-center tw-text-lg tw-mt-5 text-black-2"
-      style="max-width: 348px; letter-spacing: -0.66px"
+      class="
+        tw-m-auto tw-text-center tw-text-base
+        lg:tw-text-lg
+        tw-mt-5
+        text-black-2
+      "
+      style="max-width: 402px; letter-spacing: -0.66px"
     >
-      Have the courage to explore and persist in innovation!
+      <div class="tw-mx-12">
+        Have the courage to explore and persist in innovation!
+      </div>
     </div>
-    <div class="tw-flex tw-justify-center tw-mt-31">
+    <div
+      class="
+        tw-flex tw-justify-center tw-mt-7
+        sm:tw-mt-12
+        md:tw-mt-16
+        lg:tw-mt-24
+        xl:tw-mt-30
+        2lx:tw-mt-35
+        content-width
+        tw-mx-auto
+      "
+    >
       <img
-        class="tw-h-80"
-        src="../assets/images/company-ceiling.png"
+        class="tw-w-full tw-rounded-t-lg"
+        src="../assets/images/company-ceiling-2.jpg"
         alt="Company Ceiling"
       />
     </div>
   </section>
   <!-- section 2 -->
   <section id="section-2" class="tw-flex tw-justify-center">
-    <div class="content-width tw-flex tw-justify-center tw-flex-col">
-      <div class="tw-flex tw-mt-28">
-        <div class="tw-flex-1 tw-font-bold tw-text-4.5xl">About us</div>
+    <div class="content-width tw-flex tw-justify-center tw-flex-col tw-mx-4">
+      <div
+        class="
+          tw-block
+          md:tw-flex
+          tw-gap-y-3 tw-mt-14
+          md:tw-mt-16
+          lg:tw-mt-20
+          xlg:tw-mt-28
+        "
+      >
+        <div class="tw-flex-1 tw-font-bold tw-text-xl sm:tw-text-4.5xl">
+          About us
+        </div>
         <div
-          class="tw-flex-1 text-black-2 tw-leading-6"
+          class="tw-flex-1 text-black-2 tw-leading-6 tw-mt-3 md:tw-mt-0"
           style="letter-spacing: -0.5px"
         >
           We are a company specializing in network software development, the
@@ -38,10 +80,17 @@
       </div>
       <!-- sub section -->
       <div
-        class="tw-flex tw-mt-9 tw-leading-6 tw-gap-5"
+        class="tw-block md:tw-flex tw-mt-9 tw-leading-6 tw-gap-5"
         style="letter-spacing: -0.5px"
       >
-        <div class="bg-dark-1 tw-flex-1 tw-text-white tw-p-7 tw-rounded-lg">
+        <div
+          class="
+            bg-dark-1
+            tw-flex-1 tw-text-white tw-p-4
+            md:tw-p-7
+            tw-rounded-lg
+          "
+        >
           <div class="tw-text-lg tw-mb-4 tw-font-bold">Company history</div>
           <div>
             ACCURATE META - is a company with a purpose to bring amusement to
@@ -51,7 +100,18 @@
             evaluation.
           </div>
         </div>
-        <div class="bg-gray-1 tw-flex-1 text-black-2 tw-p-7 tw-rounded-lg">
+        <div
+          class="
+            bg-cotton-boll-2
+            tw-flex-1
+            text-black-2
+            tw-p-4
+            md:tw-p-8
+            tw-mt-3
+            md:tw-mt-0
+            tw-rounded-lg
+          "
+        >
           <div class="tw-text-lg tw-mb-4 tw-text-black tw-font-bold">
             Social responsibility
           </div>
@@ -67,19 +127,22 @@
       <!-- sub section map -->
       <div
         class="
-          bg-gray-1
-          tw-flex tw-items-center tw-mt-5 tw-leading-6 tw-gap-5 tw-rounded-lg
+          bg-cotton-boll-2
+          md:tw-flex
+          tw-items-center tw-mt-3
+          md:tw-mt-5
+          tw-leading-6 tw-gap-5 tw-rounded-lg
         "
         style="letter-spacing: -0.5px"
       >
         <div class="tw-m-4" style="flex-basis: 362px">
-          <div class="tw-text-lg tw-mb-4 tw-font-bold">Office location</div>
+          <div class="tw-text-lg tw-mb-3 tw-font-bold">Office location</div>
           <div>
             The head office is located in Dubai, and there are cooperation teams
             around the world.
           </div>
         </div>
-        <div class="tw-flex-1 text-black-2 tw-m-4">
+        <div class="tw-flex-1 text-black-2 tw-m-4 md:tw-m-0">
           <div class="tw-flex tw-justify-center">
             <!-- <img
               class="tw-h-30"
@@ -98,9 +161,21 @@
     -->
   <section
     id="section-3"
-    class="bg-cotton-boll tw-flex tw-justify-center tw-py-20 tw-my-14"
+    class="
+      bg-cotton-boll-1
+      tw-flex tw-justify-center tw-py-14
+      sm:tw-py-26
+      md:tw-py-20
+      lg:tw-py-24
+      xlg:tw-py-28
+      tw-my-14
+      sm:tw-my-26
+      md:tw-my-20
+      lg:tw-my-24
+      xlg:tw-my-28
+    "
   >
-    <div class="content-width tw-flex tw-justify-center tw-flex-col">
+    <div class="content-width tw-flex tw-justify-center tw-flex-col tw-mx-4">
       <div class="">
         <div class="tw-text-center tw-font-bold tw-text-4.5xl">
           Technology products
@@ -116,50 +191,72 @@
         </div>
       </div>
       <!-- sub section -->
-      <div class="tw-bg-white tw-flex tw-mt-9 tw-rounded-lg tw-relative">
+      <div class="tw-bg-white lg:tw-flex tw-mt-9 tw-rounded-lg tw-relative">
         <div
-          class="tw-ml-9 tw-mt-10 tw-flex-grow-0 tw-flex-0 tw-flex-shrink"
+          class="
+            tw-flex tw-items-center
+            lg:tw-block
+            tw-gap-x-4 tw-ml-9 tw-mt-10 tw-flex-grow-0 tw-flex-0 tw-flex-shrink
+          "
           style="flex-basis: 300px"
         >
-          <BlockChainCartoonIcon class="tw-h-32" />
+          <BlockChainCartoonIcon class="tw-h-14 md:tw-h-28 lg:tw-h-32" />
 
           <div
-            class="tw-absolute tw-left-9 tw-bottom-8 tw-text-3xl tw-font-bold"
+            class="
+              lg:tw-absolute
+              tw-left-9 tw-bottom-8 tw-text-lg
+              md:tw-text-xl
+              lg:tw-text-3xl
+              tw-font-bold
+            "
           >
             Block chain wallet product
           </div>
         </div>
         <div
           class="
-            tw-mr-1 tw-my-3 tw-flex-grow tw-flex-shrink-0 tw-flex tw-justify-end
+            tw-mr-1 tw-my-7 tw-flex-grow tw-flex-shrink-0
+            lg:tw-flex
+            tw-justify-end
           "
           style="flex-basis: 771px"
         >
-          <BlockChainCartoon class="tw-h-82" />
+          <BlockChainCartoon class="tw-w-full tw-mx-9 lg:tw-mx-0" />
         </div>
       </div>
 
       <!-- sub section -->
-      <div class="tw-bg-white tw-flex tw-mt-9 tw-rounded-lg tw-relative">
+      <div class="tw-bg-white lg:tw-flex tw-mt-9 tw-rounded-lg tw-relative">
         <div
-          class="tw-ml-9 tw-mt-10 tw-flex-grow-0 tw-flex-shrink"
+          class="
+            tw-flex tw-items-center
+            lg:tw-block
+            tw-gap-x-4 tw-ml-9 tw-mt-10 tw-flex-grow-0 tw-flex-shrink
+          "
           style="flex-basis: 384px"
         >
-          <ChatSoftwareCartoonIcon class="tw-h-32" />
+          <ChatSoftwareCartoonIcon class="tw-h-14 md:tw-h-28 lg:tw-h-32" />
 
           <div
-            class="tw-absolute tw-left-9 tw-bottom-8 tw-text-3xl tw-font-bold"
+            class="
+              lg:tw-absolute
+              tw-left-9 tw-bottom-8 tw-text-lg
+              md:tw-text-xl
+              lg:tw-text-3xl
+              tw-font-bold
+            "
           >
             Chat Software
           </div>
         </div>
         <div
           class="
-            tw-mr-1 tw-my-3 tw-flex-grow tw-flex-shrink-0 tw-flex tw-justify-end
+            tw-mr-1 tw-my-7 tw-flex-grow tw-flex-shrink-0 tw-flex tw-justify-end
           "
           style="flex-basis: 655px"
         >
-          <ChatSoftwareCartoon class="tw-h-82" />
+          <ChatSoftwareCartoon class="tw-w-full" />
         </div>
       </div>
 
@@ -173,7 +270,7 @@
   <!--
     section 4
     -->
-  <section id="section-4" class="tw-flex tw-justify-center tw-py-12 tw-mb-14">
+  <section id="section-4" class="tw-flex tw-justify-center tw-my-12 tw-mb-14">
     <div class="content-width tw-flex tw-justify-center tw-flex-col">
       <div>
         <div class="tw-font-bold tw-text-4.5xl">Technical team</div>
@@ -187,7 +284,7 @@
         >
           <!-- item 1 -->
           <div
-            class="bg-gray-1 tw-flex-1 tw-p-7 tw-rounded-lg"
+            class="bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
             style="min-width: 540px"
           >
             <div class="tw-flex-1 tw-flex tw-items-center tw-font-bold">
@@ -274,7 +371,7 @@
           </div>
           <!-- item 2 -->
           <div
-            class="bg-gray-1 tw-flex-1 tw-p-7 tw-rounded-lg"
+            class="bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
             style="min-width: 540px"
           >
             <div class="tw-flex-1 tw-flex tw-items-center tw-font-bold">
@@ -344,7 +441,7 @@
           </div>
           <!-- item 3 -->
           <div
-            class="bg-gray-1 tw-flex-1 tw-p-7 tw-rounded-lg"
+            class="bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
             style="min-width: 540px"
           >
             <div class="tw-flex-1 tw-flex tw-items-center tw-font-bold">
@@ -428,7 +525,7 @@
           </div>
           <!-- item 4 -->
           <div
-            class="bg-gray-1 tw-flex-1 tw-p-7 tw-rounded-lg"
+            class="bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
             style="min-width: 540px"
           >
             <div class="tw-flex-1 tw-flex tw-items-center tw-font-bold">
@@ -499,7 +596,7 @@
         >
           <!-- item 1 -->
           <div
-            class="bg-gray-1 tw-flex-1 tw-pt-7 tw-px-7 tw-rounded-lg"
+            class="bg-cotton-boll-2 tw-flex-1 tw-pt-7 tw-px-7 tw-rounded-lg"
             style="flex-basis: 288px"
           >
             <div class="tw-flex-1">
@@ -517,7 +614,7 @@
           </div>
           <!-- item 2 -->
           <div
-            class="bg-gray-1 tw-flex-1 tw-pt-7 tw-px-7 tw-rounded-lg"
+            class="bg-cotton-boll-2 tw-flex-1 tw-pt-7 tw-px-7 tw-rounded-lg"
             style="flex-basis: 288px"
           >
             <div class="tw-flex-1">
@@ -535,7 +632,7 @@
           </div>
           <!-- item 3-->
           <div
-            class="bg-gray-1 tw-flex-1 tw-pt-7 tw-px-7 tw-rounded-lg"
+            class="bg-cotton-boll-2 tw-flex-1 tw-pt-7 tw-px-7 tw-rounded-lg"
             style="flex-basis: 288px"
           >
             <div class="tw-flex-1">
@@ -561,7 +658,7 @@
     -->
   <section
     id="section-5"
-    class="bg-cotton-boll tw-flex tw-justify-center tw-leading-6 tw-pt-28"
+    class="bg-cotton-boll-1 tw-flex tw-justify-center tw-leading-6 tw-pt-28"
     style="letter-spacing: -0.5px"
   >
     <div class="content-width">
@@ -687,7 +784,7 @@
   <!--
     section 6
     -->
-  <section id="section-6" class="bg-cotton-boll tw-pt-28">
+  <section id="section-6" class="bg-cotton-boll-1 tw-pt-28">
     <div class="tw-flex tw-justify-center">
       <!-- <img
         class="tw-w-full"
@@ -774,5 +871,14 @@ export default defineComponent({
 .content-width {
   width: 100%;
   max-width: 1110px;
+}
+::v-deep {
+  .leaflet-container {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    @media (max-width: 770px) {
+      border-radius: 10px;
+    }
+  }
 }
 </style>

@@ -41,6 +41,9 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      'white-1': '#F7F9FB',
+      'white-2': 'rgba(247, 249, 251, 0.2)',
+      'blue-1': '#416FF4',
     },
     spacing: {
       px: '1px',
@@ -86,6 +89,7 @@ module.exports = {
       68: '17rem',
       72: '18rem',
       76: '19rem',
+      78: '19.5rem',
       80: '20rem',
 
       // 81: '20.4rem',
@@ -98,6 +102,7 @@ module.exports = {
 
       88: '22rem',
       96: '24rem',
+      100: '25rem',
     },
     animation: {
       none: 'none',
@@ -323,8 +328,9 @@ module.exports = {
       base: ['1rem', { lineHeight: '1.5rem' }], // font-size: 18px
       lg: ['1.125rem', { lineHeight: '1.75rem' }], // font-size: 20px
       xl: ['1.25rem', { lineHeight: '1.75rem' }],
-      '2xl': ['1.5rem', { lineHeight: '2rem' }],
-      '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+      '2xl': ['1.5rem', { lineHeight: '2rem' }], // font-size: 27px
+      '2.9xl': ['1.777779rem', { lineHeight: '2.2rem' }], // font-size: 32px
+      '3xl': ['1.875rem', { lineHeight: '2.25rem' }], // font-size: 34px
       '3.5xl': ['2rem', { lineHeight: '2.25rem' }], // font-size: 36px
       '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
       '4.2xl': ['2.325rem', { lineHeight: '2.5rem' }],

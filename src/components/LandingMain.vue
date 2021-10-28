@@ -174,6 +174,7 @@
       lg:tw-my-24
       xlg:tw-my-28
     "
+    style="letter-spacing: -1.122px"
   >
     <div class="content-width tw-flex tw-justify-center tw-flex-col tw-mx-4">
       <div class="">
@@ -261,7 +262,7 @@
       </div>
 
       <!-- sub section -->
-      <div class="tw-flex tw-mt-3 tw-rounded-lg tw-relative">
+      <div class="tw-flex tw-mt-12 tw-rounded-lg tw-relative">
         <OnlineGameCartoon />
       </div>
     </div>

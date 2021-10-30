@@ -62,7 +62,7 @@
           tw-gap-y-3 tw-mt-14
           md:tw-mt-16
           lg:tw-mt-20
-          xlg:tw-mt-28
+          xl:tw-mt-28
         "
       >
         <div class="tw-flex-1 tw-font-bold tw-text-xl sm:tw-text-4.5xl">
@@ -167,22 +167,36 @@
       sm:tw-py-26
       md:tw-py-20
       lg:tw-py-24
-      xlg:tw-py-28
+      xl:tw-py-28
       tw-my-14
       sm:tw-my-26
       md:tw-my-20
       lg:tw-my-24
-      xlg:tw-my-28
+      xl:tw-my-28
     "
     style="letter-spacing: -1.122px"
   >
     <div class="content-width tw-flex tw-justify-center tw-flex-col tw-mx-4">
       <div class="">
-        <div class="tw-text-center tw-font-bold tw-text-4.5xl">
+        <div
+          class="
+            tw-text-center tw-font-bold tw-text-xl
+            md:tw-text-3xl
+            lg:tw-text-4.5xl
+          "
+        >
           Technology products
         </div>
         <div
-          class="tw-text-center tw-m-auto text-black-2 tw-leading-6 tw-mt-6"
+          class="
+            tw-text-center tw-m-auto
+            text-black-2
+            tw-leading-6 tw-mt-3
+            md:tw-mt-4
+            lg:tw-mt-6
+            tw-text-base
+            lg:tw-text-lg
+          "
           style="letter-spacing: -0.5px; max-width: 748px"
         >
           We are a company specializing in network software development, the
@@ -231,9 +245,9 @@
       <div class="tw-bg-white lg:tw-flex tw-mt-9 tw-rounded-lg tw-relative">
         <div
           class="
-            tw-flex tw-items-center
+            tw-flex tw-items-center tw-flex-grow-0 tw-flex-shrink
             lg:tw-block
-            tw-gap-x-4 tw-ml-9 tw-mt-10 tw-flex-grow-0 tw-flex-shrink
+            tw-gap-x-4 tw-ml-9 tw-mt-10
           "
           style="flex-basis: 384px"
         >
@@ -271,10 +285,25 @@
   <!--
     section 4
     -->
-  <section id="section-4" class="tw-flex tw-justify-center tw-my-12 tw-mb-14">
-    <div class="content-width tw-flex tw-justify-center tw-flex-col">
-      <div>
-        <div class="tw-font-bold tw-text-4.5xl">Technical team</div>
+  <section
+    id="section-4"
+    class="
+      tw-flex tw-justify-center tw-my-14
+      sm:tw-my-26
+      md:tw-my-20
+      lg:tw-my-24
+      xl:tw-my-28
+    "
+  >
+    <div
+      class="
+        content-width
+        tw-flex tw-justify-center tw-flex-col tw-mx-4 tw-px-4
+        xl:tw-px-0
+      "
+    >
+      <div class="tw-font-bold tw-text-xl md:tw-text-3xl lg:tw-text-4.5xl">
+        Technical Team
       </div>
 
       <div class="content-width tw-flex tw-justify-center tw-flex-col">
@@ -578,10 +607,33 @@
 
         <!-- sub section -->
 
-        <div class="tw-flex tw-mt-28">
-          <div class="tw-flex-1 tw-font-bold tw-text-4.5xl">Operation team</div>
+        <div
+          class="
+            lg:tw-flex
+            tw-mt-14
+            sm:tw-mt-26
+            md:tw-mt-20
+            lg:tw-mt-24
+            xl:tw-mt-28
+            tw-mb-3
+            sm:tw-mb-7
+            md:tw-mb-10
+            lg:tw-mb-20
+            xl:tw-mb-24
+            tw-gap-6
+          "
+        >
           <div
-            class="tw-flex-1 text-black-2 tw-leading-6"
+            class="
+              tw-flex-1 tw-font-bold tw-text-xl
+              md:tw-text-3xl
+              lg:tw-text-4.5xl
+            "
+          >
+            Operation Team
+          </div>
+          <div
+            class="tw-flex-1 text-black-2 tw-leading-6 tw-mt-3 lg:tw-mt-0"
             style="letter-spacing: -0.5px"
           >
             In addition to having a professional technical team, we have a
@@ -592,7 +644,7 @@
 
         <!-- sub section -->
         <div
-          class="tw-flex tw-mt-9 tw-gap-6 tw-flex-wrap"
+          class="tw-flex tw-gap-6 tw-flex-wrap"
           style="letter-spacing: -0.5px"
         >
           <!-- item 1 -->
@@ -659,20 +711,40 @@
     -->
   <section
     id="section-5"
-    class="bg-cotton-boll-1 tw-flex tw-justify-center tw-leading-6 tw-pt-28"
+    class="
+      bg-cotton-boll-1
+      tw-flex tw-justify-center tw-leading-6 tw-py-14
+      sm:tw-py-26
+      md:tw-py-20
+      lg:tw-py-24
+      xl:tw-py-28
+      tw-mt-14
+      sm:tw-mt-26
+      md:tw-mt-20
+      lg:tw-mt-24
+      xl:tw-mt-28
+    "
     style="letter-spacing: -0.5px"
   >
-    <div class="content-width">
+    <div class="content-width tw-mx-4 tw-px-4 xl:tw-px-0">
       <!-- row -->
-      <div class="tw-flex tw-justify-between tw-items-center tw-flex-wrap">
+      <div
+        class="
+          tw-flex tw-justify-between tw-items-center tw-flex-wrap tw-gap-y-3
+        "
+      >
         <div
-          class="tw-text-left tw-font-bold tw-text-4.5xl"
+          class="
+            tw-text-left tw-font-bold tw-text-xl
+            md:tw-text-3xl
+            lg:tw-text-4.5xl
+          "
           style="flex-basis: 400px"
         >
-          Join us
+          Join Us
         </div>
         <div
-          class="tw-text-left text-black-2 tw-mt-6 text-gray-1"
+          class="tw-text-left text-black-2 text-gray-1"
           style="max-width: 748px"
         >
           <div>Current Recruitment position:</div>
@@ -683,30 +755,63 @@
       <!-- row -->
       <div class="tw-flex tw-justify-between tw-text-left tw-gap-x-3 tw-mt-16">
         <div
-          class="tw-text-lg text-gray-1 tw-relative"
-          style="flex-basis: 444px"
+          class="
+            tw-text-lg
+            text-gray-1
+            tw-relative tw-hidden
+            md:tw-block
+            tw-flex-shrink-0
+          "
+          style="flex-basis: 379px"
         >
           <ValuesScrollLinks />
         </div>
-        <div style="max-width: 717px">
+        <div class="tw-overflow-hidden">
           <!-- card 1 -->
-          <div id="sub-section-1" class="tw-bg-white tw-p-7 tw-rounded-lg">
+          <div id="sub-section-1" class="tw-bg-white tw-rounded-lg tw-p-7">
             <JoinPerformanceCartoon />
-            <div class="tw-text-2xl tw-font-bold" style="max-width: 478px">
+            <div
+              class="
+                tw-text-base
+                sm:tw-text-lg
+                md:tw-text-xl
+                lg:tw-text-2xl
+                tw-font-bold
+              "
+              style="max-width: 478px"
+            >
               Today's performance is the lowest requirements tomorrow
             </div>
           </div>
           <!-- card 2 -->
-          <div class="tw-bg-white tw-p-7 tw-mt-9 tw-rounded-lg">
+          <div class="tw-bg-white tw-rounded-lg tw-p-7 tw-mt-9">
             <JoinHappyLifeCartoon />
-            <div class="tw-text-2xl tw-font-bold" style="max-width: 478px">
+            <div
+              class="
+                tw-text-base
+                sm:tw-text-lg
+                md:tw-text-xl
+                lg:tw-text-2xl
+                tw-font-bold
+              "
+              style="max-width: 478px"
+            >
               Serious life, happy work
             </div>
           </div>
           <!-- card 3 -->
-          <div class="tw-bg-white tw-p-7 tw-mt-9 tw-rounded-lg">
+          <div class="tw-bg-white tw-rounded-lg tw-p-7 tw-mt-9">
             <JoinChangeLifeCartoon />
-            <div class="tw-text-2xl tw-font-bold" style="max-width: 478px">
+            <div
+              class="
+                tw-text-base
+                sm:tw-text-lg
+                md:tw-text-xl
+                lg:tw-text-2xl
+                tw-font-bold
+              "
+              style="max-width: 478px"
+            >
               Let technology change life
             </div>
           </div>
@@ -800,7 +905,7 @@
     footer
     -->
   <footer class="text-gray-3 tw-flex tw-items-center">
-    <div class="content-width tw-m-auto tw-my-8">
+    <div class="content-width tw-m-auto tw-my-8 tw-mx-4 tw-px-2 xl:tw-px-0">
       © 2021 Fire Phoenix Trading L.L.C, Inc. All rights reserved.
     </div>
   </footer>

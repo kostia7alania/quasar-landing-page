@@ -9,7 +9,7 @@
       :style="isActiveContacts ? 'width: 42px' : 'border-radius: 33px'"
       @click="setIsActiveContacts(!isActiveContacts)"
     >
-      <div style="width: 55px" v-show="!isActiveContacts">Join Us</div>
+      <div style="width: 60px" v-show="!isActiveContacts">Join Us</div>
       <svg
         v-show="isActiveContacts"
         width="24"

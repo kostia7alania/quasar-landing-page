@@ -852,7 +852,15 @@
           <!-- card 7 -->
           <div
             id="sub-section-4"
-            class="tw-bg-white tw-p-7 tw-py-12 tw-mt-9 tw-rounded-lg"
+            class="
+              tw-bg-white tw-p-5
+              md:tw-p-6
+              lg:tw-p-7
+              tw-py-4
+              md:tw-py-6
+              lg:tw-py-12
+              tw-mt-9 tw-rounded-lg
+            "
           >
             <div class="tw-flex tw-items-center tw-text-2xl tw-font-bold">
               <IconTeamBuilding />
@@ -863,7 +871,14 @@
           <!-- card 8-9 -->
           <div class="tw-flex tw-gap-5 tw-mt-9">
             <!-- card 8 -->
-            <div class="tw-bg-white tw-p-7 tw-py-7 tw-rounded-lg tw-w-full">
+            <div
+              class="
+                tw-bg-white tw-p-5
+                md:tw-p-6
+                lg:tw-p-7
+                tw-rounded-lg tw-w-full
+              "
+            >
               <div>
                 <IconLunch />
                 <div class="tw-text-2xl tw-font-bold tw-mt-4">
@@ -872,7 +887,14 @@
               </div>
             </div>
             <!-- card 9 -->
-            <div class="tw-bg-white tw-p-7 tw-py-7 tw-rounded-lg tw-w-full">
+            <div
+              class="
+                tw-bg-white tw-p-5
+                md:tw-p-6
+                lg:tw-p-7
+                tw-rounded-lg tw-w-full
+              "
+            >
               <div>
                 <IconHotel />
                 <div class="tw-text-2xl tw-font-bold tw-mt-4">

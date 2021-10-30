@@ -143,13 +143,13 @@ export default {
     //   this.getPois(bounds, zoom);
     //   this.getAccommodations(bounds);
     // },
-    getAccommodations(bounds) {
+    getAccommodations(/*bounds*/) {
       console.log('get accos');
       setTimeout(() => {
         this.markerDataAccos = this.randArray();
       }, 1000);
     },
-    getPois(bounds, zoom = this.zoom) {
+    getPois(/*bounds, zoom = this.zoom*/) {
       console.log('getpois');
       setTimeout(() => {
         this.markerData = this.randArray();

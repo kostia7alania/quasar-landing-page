@@ -243,7 +243,7 @@
             "
             style="flex-basis: 771px"
           >
-            <BlockChainCartoon class="tw-w-full tw-mx-9 lg:tw-mx-0" />
+            <BlockChainCartoon class="lg:tw-w-full tw-mx-9 lg:tw-mx-0" />
           </div>
         </div>
 

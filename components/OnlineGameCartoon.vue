@@ -6,9 +6,11 @@
       alt="online game cartoon background"
     />
     <!-- 玩玩扑克 -->
+    <!-- width="669" -->
     <svg
-      class="tw-absolute tw-bottom-14 tw-right-12 tw-left-0 tw-mx-auto"
-      width="669"
+      class="
+        tw-absolute tw-w-full tw-bottom-14 tw-right-12 tw-left-0 tw-mx-auto
+      "
       height="163"
       viewBox="0 0 669 163"
       fill="none"

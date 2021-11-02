@@ -170,7 +170,7 @@ export default {
   opacity: 0.96;
 }
 .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
-  bottom: 36px;
+  bottom: 48px;
   left: 32px;
   width: fit-content;
 }

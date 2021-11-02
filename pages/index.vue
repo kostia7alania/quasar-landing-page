@@ -150,7 +150,7 @@
                 src="/assets/images/office-location.png"
                 alt="Company Ceiling"
               /> -->
-              <MapTop style="height: 200px" />
+              <MapTop class="map-top" style="height: 200px" />
             </div>
           </div>
         </div>
@@ -326,7 +326,7 @@
             <!-- item 1 -->
             <div
               class="bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
-              style="min-width: 540px"
+              style="flex-basis: 400px"
             >
               <div class="tw-flex-1 tw-flex tw-items-center tw-font-bold">
                 <svg
@@ -402,7 +402,9 @@
                   />
                 </svg>
 
-                <div class="tw-text-2xl tw-ml-5">Specialization</div>
+                <div class="tw-text-lg md:tw-text-xl lg:tw-text-2xl tw-ml-5">
+                  Specialization
+                </div>
               </div>
               <div class="tw-mt-3 text-gray-1 tw-text-base">
                 We only recruit people of various professions with the highest
@@ -413,7 +415,7 @@
             <!-- item 2 -->
             <div
               class="bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
-              style="min-width: 540px"
+              style="flex-basis: 400px"
             >
               <div class="tw-flex-1 tw-flex tw-items-center tw-font-bold">
                 <svg
@@ -473,7 +475,9 @@
                   />
                 </svg>
 
-                <div class="tw-text-2xl tw-ml-5">Internalization</div>
+                <div class="tw-text-lg md:tw-text-xl lg:tw-text-2xl tw-ml-5">
+                  Internalization
+                </div>
               </div>
               <div class="tw-mt-3 text-gray-1 tw-text-base">
                 We have an international team, including staff from China,
@@ -483,7 +487,7 @@
             <!-- item 3 -->
             <div
               class="bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
-              style="min-width: 540px"
+              style="flex-basis: 400px"
             >
               <div class="tw-flex-1 tw-flex tw-items-center tw-font-bold">
                 <svg
@@ -555,7 +559,9 @@
                   />
                 </svg>
 
-                <div class="tw-text-2xl tw-ml-5">Technology</div>
+                <div class="tw-text-lg md:tw-text-xl lg:tw-text-2xl tw-ml-5">
+                  Technology
+                </div>
               </div>
               <div class="tw-mt-3 text-gray-1 tw-text-base">
                 Employees from all over the world communicate closely through
@@ -567,7 +573,7 @@
             <!-- item 4 -->
             <div
               class="bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
-              style="min-width: 540px"
+              style="flex-basis: 400px"
             >
               <div class="tw-flex-1 tw-flex tw-items-center tw-font-bold">
                 <svg
@@ -607,7 +613,9 @@
                   />
                 </svg>
 
-                <div class="tw-text-2xl tw-ml-5">Humanization</div>
+                <div class="tw-text-lg md:tw-text-xl lg:tw-text-2xl tw-ml-5">
+                  Humanization
+                </div>
               </div>
               <div class="tw-mt-3 text-gray-1 tw-text-base">
                 Team members help each other, effectively communicate, and work
@@ -838,9 +846,16 @@
             <!-- card 5 -->
             <div
               id="sub-section-3"
-              class="tw-bg-white tw-p-7 tw-mt-9 tw-rounded-lg"
+              class="tw-bg-white tw-p-6 md:tw-p-7 tw-mt-9 tw-rounded-lg"
             >
-              <div class="tw-flex tw-items-center tw-text-2xl tw-font-bold">
+              <div
+                class="
+                  tw-flex tw-items-center tw-text-lg
+                  md:tw-text-xl
+                  lg:tw-text-2xl
+                  tw-font-bold
+                "
+              >
                 <IconPromotion />
                 <div class="tw-ml-6">Promotion</div>
               </div>
@@ -854,7 +869,14 @@
             </div>
             <!-- card 6 -->
             <div class="tw-bg-white tw-p-7 tw-mt-9 tw-rounded-lg">
-              <div class="tw-flex tw-items-center tw-text-2xl tw-font-bold">
+              <div
+                class="
+                  tw-flex tw-items-center tw-text-lg
+                  md:tw-text-xl
+                  lg:tw-text-2xl
+                  tw-font-bold
+                "
+              >
                 <IconProgress />
                 <div class="tw-ml-6">Progress</div>
               </div>
@@ -868,8 +890,8 @@
             <div
               id="sub-section-4"
               class="
-                tw-bg-white tw-p-5
-                md:tw-p-6
+                tw-bg-white tw-p-4
+                md:tw-p-5
                 lg:tw-p-7
                 tw-py-4
                 md:tw-py-6
@@ -877,7 +899,14 @@
                 tw-mt-9 tw-rounded-lg
               "
             >
-              <div class="tw-flex tw-items-center tw-text-2xl tw-font-bold">
+              <div
+                class="
+                  tw-flex tw-items-center tw-text-lg
+                  md:tw-text-xl
+                  lg:tw-text-2xl
+                  tw-font-bold
+                "
+              >
                 <IconTeamBuilding />
                 <div class="tw-ml-6">Team building</div>
               </div>
@@ -888,15 +917,23 @@
               <!-- card 8 -->
               <div
                 class="
-                  tw-bg-white tw-p-5
-                  md:tw-p-6
+                  tw-bg-white tw-p-4
+                  md:tw-p-5
                   lg:tw-p-7
                   tw-rounded-lg tw-w-full
                 "
               >
                 <div>
                   <IconLunch />
-                  <div class="tw-text-2xl tw-font-bold tw-mt-4">
+                  <div
+                    class="
+                      tw-text-lg
+                      md:tw-text-xl
+                      lg:tw-text-2xl
+                      tw-font-bold tw-mt-2
+                      md:tw-mt-4
+                    "
+                  >
                     Providing business lunch
                   </div>
                 </div>
@@ -904,15 +941,23 @@
               <!-- card 9 -->
               <div
                 class="
-                  tw-bg-white tw-p-5
-                  md:tw-p-6
+                  tw-bg-white tw-p-4
+                  md:tw-p-5
                   lg:tw-p-7
                   tw-rounded-lg tw-w-full
                 "
               >
                 <div>
                   <IconHotel />
-                  <div class="tw-text-2xl tw-font-bold tw-mt-4">
+                  <div
+                    class="
+                      tw-text-lg
+                      md:tw-text-xl
+                      lg:tw-text-2xl
+                      tw-font-bold tw-mt-2
+                      md:tw-mt-4
+                    "
+                  >
                     High-end hotel accommodation
                   </div>
                 </div>
@@ -927,7 +972,17 @@
     <!--
     section 6
     -->
-    <section id="section-6" class="bg-cotton-boll-1 tw-pt-28">
+    <section
+      id="section-6"
+      class="
+        bg-cotton-boll-1
+        tw-pt-14
+        sm:tw-pt-26
+        md:tw-pt-20
+        lg:tw-pt-24
+        xl:tw-pt-28
+      "
+    >
       <div class="tw-flex tw-justify-center">
         <!-- <nuxt-img
           class="tw-w-full"
@@ -1012,12 +1067,14 @@ export default defineComponent({
   width: 100%;
   max-width: 1110px;
 }
-::v-deep {
-  .leaflet-container {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    @media (max-width: 770px) {
-      border-radius: 10px;
+.map-top {
+  &::v-deep {
+    .leaflet-container {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      @media (max-width: 770px) {
+        border-radius: 10px;
+      }
     }
   }
 }

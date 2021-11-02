@@ -1,11 +1,11 @@
 <template>
   <div
     style="width: 55px"
-    class="tw-text-center tw-flex tw-justify-center tw-relative"
+    class="tw-text-center tw-flex tw-justify-center sm:tw-relative"
   >
     <button
       :class="classComputed"
-      class="tw-z-50 button__join-us"
+      class="button__join-us"
       :style="isActiveContacts ? 'width: 42px' : 'border-radius: 33px'"
       @click="setIsActiveContacts(!isActiveContacts)"
     >
@@ -23,7 +23,9 @@
         />
       </svg>
     </button>
-    <HeaderModal v-if="isActiveContacts" @close="isActiveContacts = false" />
+    <HeaderModal v-if="isActiveContacts" @close="isActiveContacts = false">
+      <Contacts class="tw-py-4 tw-text-left tw-px-6" />
+    </HeaderModal>
   </div>
 </template>
 
@@ -31,9 +33,11 @@
 import { defineComponent, ref } from '@nuxtjs/composition-api'
 import HeaderModal from './HeaderModal.vue'
 
+import Contacts from '@/components/Contacts.vue'
+
 export default defineComponent({
   name: 'HeaderJoinUs',
-  components: { HeaderModal },
+  components: { HeaderModal, Contacts },
   setup() {
     const isActiveContacts = ref(false)
 
@@ -49,7 +53,7 @@ export default defineComponent({
   computed: {
     classComputed() {
       if (this.isActiveContacts)
-        return 'tw-text-black tw-bg-black tw-rounded-full tw-flex tw-justify-center tw-items-center'
+        return 'tw-text-black tw-bg-black tw-rounded-full tw-flex tw-justify-center tw-items-center tw-z-50'
       return 'bg-color-primary tw-text-white tw-font-bold tw-py-2 tw-px-6 box-shadow-1'
     },
   },

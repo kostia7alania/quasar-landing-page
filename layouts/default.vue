@@ -28,5 +28,8 @@ export default defineComponent({
 .app-main {
   overflow: auto;
   height: calc(100vh - 99px);
+  @media (max-width: 770px) {
+    height: calc(100vh - 65px);
+  }
 }
 </style>

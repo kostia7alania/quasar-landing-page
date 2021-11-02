@@ -1,15 +1,22 @@
 <template>
   <div>
     <div
-      style="width: 333px; height: 240px"
+      :style="{ width, height }"
       class="
         tw-modal-container tw-bg-white tw-absolute tw-right-2 tw-top-14
         tw-md:max-w-md
-        tw-mx-auto tw-rounded-md tw-shadow-lg tw-z-50 tw-overflow-y-auto
+        tw-mx-auto
+        tw-rounded-md
+        tw-shadow-lg
+        tw-z-50
+        tw-overflow-y-auto
+        tw-flex
+        tw-items-center
       "
     >
       <!-- Add margin if you want to see some of the overlay behind the modal-->
-      <Contacts class="tw-modal-content tw-py-4 tw-text-left tw-px-6" />
+      <!-- <Contacts class="tw-modal-content tw-py-4 tw-text-left tw-px-6" /> -->
+      <slot class="tw-modal-content" />
     </div>
 
     <!--Modal-->
@@ -43,16 +50,21 @@ import {
   // ComponentPropsOptions,
 } from '@nuxtjs/composition-api'
 
-import Contacts from '@/components/Contacts.vue'
-
 interface IKeyboardEvent {
   keyCode: number
 }
 
 export default defineComponent({
   name: 'HeaderModal',
-  components: {
-    Contacts,
+  props: {
+    width: {
+      type: [String, Number],
+      default: '333px',
+    },
+    height: {
+      type: [String, Number],
+      default: '222px',
+    },
   },
   emits: ['close'],
   setup(_, { emit }: SetupContext) {

@@ -4,7 +4,7 @@
     <div class="tw-flex tw-justify-between tw-items-center tw-pb-3">
       <div
         style="letter-spacing: -1.584px; font-size: 48px"
-        class="tw-mt-2 tw-font-bold"
+        class="tw-font-bold"
       >
         Contacts
       </div>

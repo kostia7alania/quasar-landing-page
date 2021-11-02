@@ -6,13 +6,12 @@
     "
   >
     <!-- left -->
-    <div class="tw-ml-14">
+    <div class="tw-ml-14 tw-order-1">
       <div class="logo-wrapper">
         <a href="#section-1" @click.prevent="scrollToLink('#section-1')">
           <svg
             class="logo"
             width="42"
-            height="38"
             viewBox="0 0 42 38"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -42,21 +41,11 @@
       </div>
     </div>
     <!-- center -->
-    <nav class="navbar tw-font-bold" style="max-width: 1110px">
-      <ul class="navbar-items tw-flex" style="column-gap: 40px">
-        <div v-for="{ title, id } in linksMap" :key="id" class="link-item">
-          <a
-            :class="{ 'link--active': id === activeLink }"
-            :href="id"
-            @click.prevent="scrollToLink(id)"
-          >
-            {{ title }}
-          </a>
-        </div>
-      </ul>
-    </nav>
+    <MainHeaderMenu class="tw-order-3 md:tw-order-2" />
     <!-- right -->
-    <div class="tw-mr-14">
+    <div
+      class="tw-mr-6 md:tw-mr-14 tw-ml-auto md:tw-ml-0 tw-order-2 md:tw-order-3"
+    >
       <HeaderJoinUs />
     </div>
   </header>
@@ -65,6 +54,8 @@
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 import HeaderJoinUs from './HeaderJoinUs.vue'
+import MainHeaderMenu from './MainHeaderMenu.vue'
+
 import { linksMap } from '@/layouts/constants/linksMap'
 
 import { useScrollEvent } from '@/compositions/scrollEvent'
@@ -73,6 +64,7 @@ export default defineComponent({
   name: 'MainHeader',
   components: {
     HeaderJoinUs,
+    MainHeaderMenu,
   },
   setup(/* _, ctx: SetupContext */) {
     const { scrollToLink, activeLink } = useScrollEvent()
@@ -86,10 +78,12 @@ export default defineComponent({
 .app-header {
   height: 99px;
   z-index: 1111;
-}
-
-.box-shadow-1 {
-  box-shadow: 21px 15px 23px rgba(65, 111, 244, 0.109804);
+  @media (max-width: 768px) {
+    height: 65px;
+    .logo {
+      width: 32px;
+    }
+  }
 }
 
 .logo {

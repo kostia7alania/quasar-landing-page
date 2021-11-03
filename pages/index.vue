@@ -984,19 +984,56 @@
       "
     >
       <div class="tw-flex tw-justify-center">
+        <div class="content-width tw-mx-4 tw-px-4 xl:tw-px-0">
+          <!-- row -->
+          <div
+            class="
+              tw-flex tw-justify-between tw-items-center tw-flex-wrap tw-gap-y-3
+            "
+          >
+            <div
+              class="
+                tw-text-left tw-font-bold tw-text-xl
+                md:tw-text-3xl
+                lg:tw-text-4.5xl
+              "
+              style="flex-basis: 400px"
+            >
+              Location
+            </div>
+            <div
+              class="tw-text-left text-black-2 text-gray-1"
+              style="max-width: 748px"
+            >
+              <!-- <div>Current Recruitment position:</div>
+            <div>Developers, marketing</div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="
+          tw-flex tw-justify-center tw-mt-14
+          sm:tw-mt-26
+          md:tw-mt-20
+          lg:tw-mt-24
+          xl:tw-mt-28
+        "
+      >
         <!-- <nuxt-img
           class="tw-w-full"
           src="/assets/images/map-bottom.png"
           alt="Contacts Map"
         /> -->
-        <MapTop class="tw-w-full tw-h-100" />
+        <MapTop class="tw-w-full" style="height: calc(100vh - 450px)" />
       </div>
     </section>
 
     <!--
     footer
     -->
-    <footer class="text-gray-3 tw-flex tw-items-center">
+    <footer class="text-gray-3 tw-flex tw-items-center tw-justify-center">
       <div class="content-width tw-m-auto tw-my-8 tw-mx-4 tw-px-2 xl:tw-px-0">
         © 2021 Fire Phoenix Trading L.L.C, Inc. All rights reserved.
       </div>

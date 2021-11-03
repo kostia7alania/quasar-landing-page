@@ -6,7 +6,9 @@
     "
   >
     <!-- left -->
-    <div class="tw-ml-14 tw-order-1">
+    <div
+      class="tw-ml-4 sm:tw-ml-6 md:tw-ml-8 lg:tw-ml-14 xlg:tw-ml-16 tw-order-1"
+    >
       <div class="logo-wrapper">
         <a href="#section-1" @click.prevent="scrollToId('#section-1')">
           <svg
@@ -83,6 +85,15 @@ export default defineComponent({
     height: 65px;
     .logo {
       width: 32px;
+    }
+  }
+}
+
+::v-deep {
+  .tw-modal-container {
+    @media (max-width: 500px) {
+      // on small screens - full width
+      width: calc(100vw - 20px) !important;
     }
   }
 }

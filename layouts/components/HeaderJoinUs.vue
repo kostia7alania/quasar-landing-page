@@ -23,7 +23,11 @@
         />
       </svg>
     </button>
-    <HeaderModal v-if="isActiveContacts" @close="isActiveContacts = false">
+    <HeaderModal
+      v-if="isActiveContacts"
+      class="join-us-modal"
+      @close="isActiveContacts = false"
+    >
       <Contacts class="tw-py-4 tw-text-left tw-px-6" />
     </HeaderModal>
   </div>
@@ -74,4 +78,15 @@ export default defineComponent({
     background: blue;
   }
 }
+// .join-us-modal {
+// replaced to parent
+//   &::v-deep {
+//     .tw-modal-container {
+//       @media (max-width: 500px) {
+//         // on small screens - full width
+//         width: calc(100vw - 20px) !important;
+//       }
+//     }
+//   }
+// }
 </style>

@@ -8,7 +8,7 @@
     <!-- left -->
     <div class="tw-ml-14 tw-order-1">
       <div class="logo-wrapper">
-        <a href="#section-1" @click.prevent="scrollToLink('#section-1')">
+        <a href="#section-1" @click.prevent="scrollToId('#section-1')">
           <svg
             class="logo"
             width="42"
@@ -57,8 +57,9 @@ import HeaderJoinUs from './HeaderJoinUs.vue'
 import MainHeaderMenu from './MainHeaderMenu.vue'
 
 import { linksMap } from '@/layouts/constants/linksMap'
+import { useScrollEventTop } from '@/compositions/scrollEvent'
 
-import { useScrollEvent } from '@/compositions/scrollEvent'
+import { scrollToId } from '@/compositions/scrollTo'
 
 export default defineComponent({
   name: 'MainHeader',
@@ -67,9 +68,9 @@ export default defineComponent({
     MainHeaderMenu,
   },
   setup(/* _, ctx: SetupContext */) {
-    const { scrollToLink, activeLink } = useScrollEvent()
+    const { activeLink } = useScrollEventTop()
 
-    return { linksMap, scrollToLink, activeLink }
+    return { linksMap, scrollToId, activeLink }
   },
 })
 </script>

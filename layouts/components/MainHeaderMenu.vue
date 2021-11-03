@@ -9,7 +9,7 @@
           <a
             :class="{ 'link--active': id === activeLink }"
             :href="id"
-            @click.prevent="scrollToLink(id)"
+            @click.prevent="scrollToId(id)"
           >
             {{ title }}
           </a>
@@ -19,7 +19,6 @@
     <MainHeaderMenuMobile
       class="tw-block md:tw-hidden"
       :active-link="activeLink"
-      @scrollToLink="scrollToLink"
     />
   </div>
 </template>
@@ -29,7 +28,8 @@ import { defineComponent } from '@nuxtjs/composition-api'
 import MainHeaderMenuMobile from './MainHeaderMenuMobile.vue'
 import { linksMap } from '@/layouts/constants/linksMap'
 
-import { useScrollEvent } from '@/compositions/scrollEvent'
+import { useScrollEventTop } from '@/compositions/scrollEvent'
+import { scrollToId } from '@/compositions/scrollTo'
 
 export default defineComponent({
   name: 'MainHeaderMenu',
@@ -37,8 +37,8 @@ export default defineComponent({
     MainHeaderMenuMobile,
   },
   setup(/* _, ctx: SetupContext */) {
-    const { scrollToLink, activeLink } = useScrollEvent()
-    return { linksMap, scrollToLink, activeLink }
+    const { activeLink } = useScrollEventTop()
+    return { linksMap, scrollToId, activeLink }
   },
 })
 </script>

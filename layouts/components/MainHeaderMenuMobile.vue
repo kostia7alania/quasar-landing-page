@@ -68,6 +68,7 @@
 import { defineComponent, ref } from '@nuxtjs/composition-api'
 import HeaderModal from './HeaderModal.vue'
 import { linksMap } from '@/layouts/constants/linksMap'
+import { scrollToId } from '@/compositions/scrollTo'
 
 export default defineComponent({
   name: 'HeaderJoinUs',
@@ -78,15 +79,14 @@ export default defineComponent({
       default: '',
     },
   },
-  emits: ['scrollToLink'],
-  setup(_, { emit }) {
+  setup(/* _, { emit } */) {
     const isActiveModal = ref(false)
 
     const setIsActiveContacts = (val: boolean) => {
       isActiveModal.value = val
     }
     const scrollToLink = (id: string) => {
-      emit('scrollToLink', id)
+      scrollToId(id)
       setIsActiveContacts(false)
     }
     return {

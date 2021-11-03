@@ -8,7 +8,7 @@
         'link--active tw-font-bold': id === activeLinkBottom,
         'tw-cursor-pointer': id !== activeLinkBottom,
       }"
-      @click.prevent="scrollToLink(id)"
+      @click.prevent="scrollToId(id)"
     >
       {{ title }}
     </div>
@@ -19,17 +19,18 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 import { linksMapBottom } from '@/layouts/constants/linksMapBottom'
 
-import { useScrollEvent } from '@/compositions/scrollEvent'
+import { useScrollEventBottom } from '@/compositions/scrollEvent'
+import { scrollToId } from '@/compositions/scrollTo'
 
 export default defineComponent({
   name: 'ValuesScrollLinks',
   setup() {
-    const { activeLinkBottom, scrollToLink } = useScrollEvent()
+    const { activeLinkBottom } = useScrollEventBottom()
 
     return {
       linksMapBottom,
       activeLinkBottom,
-      scrollToLink,
+      scrollToId,
     }
   },
 })

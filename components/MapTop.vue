@@ -9,45 +9,56 @@
       </l-map>
     </no-ssr>
   </div> -->
-  <div style="width: 100%">
-    <client-only>
-      <l-map
-        ref="map"
-        :zoom="zoom"
-        :center="center"
-        @update:zoom="zoomUpdated"
-        @ready="ready"
-      >
-        <l-tile-layer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        ></l-tile-layer>
-        <!-- <l-marker name="poi-list-item" :lat-lng="latLon"></l-marker>
+  <div ref="mapTop" style="width: 100%" tabindex="0">
+    <div
+      style="width: 100%; height: 100%"
+      :class="{ 'tw-filter tw-grayscale tw-pointer-events-none': !isActive }"
+    >
+      <client-only>
+        <l-map
+          ref="map"
+          :zoom="zoom"
+          :center="center"
+          @update:zoom="zoomUpdated"
+          @ready="ready"
+        >
+          <l-tile-layer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          ></l-tile-layer>
+          <!-- <l-marker name="poi-list-item" :lat-lng="latLon"></l-marker>
         <l-marker :lat-lng="[center[0], center[1]]">
           <l-popup class="leaflet-popup-component">
             <div>{{ latLon[0] }}</div>
           </l-popup>
         </l-marker> -->
-        <l-marker
-          :ref="'mapMarker' + 50"
-          :key="'current-accommodation'"
-          name="accos-list-item"
-          :lat-lng="[center[0], center[1]]"
-        >
-          <l-popup class="leaflet-popup-component">
-            <Contacts class="tw-py-4 tw-text-left tw-px-6" />
-          </l-popup>
-        </l-marker>
-        <!-- <l-marker :lat-lng="[51, 6]" :icon="currentAccoIcon"></l-marker> -->
-        <!-- <l-marker :lat-lng="[52, 7]" :icon="currentAccoIcon"></l-marker>
+          <l-marker
+            :ref="'mapMarker' + 50"
+            :key="'current-accommodation'"
+            name="accos-list-item"
+            :lat-lng="[center[0], center[1]]"
+          >
+            <l-popup class="leaflet-popup-component">
+              <Contacts class="tw-py-4 tw-text-left tw-px-6" />
+            </l-popup>
+          </l-marker>
+          <!-- <l-marker :lat-lng="[51, 6]" :icon="currentAccoIcon"></l-marker> -->
+          <!-- <l-marker :lat-lng="[52, 7]" :icon="currentAccoIcon"></l-marker>
         <l-marker :lat-lng="[53, 8]" :icon="currentAccoIcon"></l-marker>
         <l-marker :lat-lng="[54, 9]" :icon="currentAccoIcon"></l-marker> -->
-      </l-map>
-    </client-only>
+        </l-map>
+      </client-only>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import {
+  defineComponent,
+  ref,
+  Ref,
+  onMounted,
+  onUnmounted,
+} from '@nuxtjs/composition-api'
 import Contacts from '@/components/Contacts.vue'
 
 const lon = 55.37831427551369
@@ -66,11 +77,36 @@ export default defineComponent({
   components: {
     Contacts,
   },
+  setup(/* _, { refs } */) {
+    const isActive: Ref<boolean> = ref(false)
+    const mapTop: Ref<any> = ref(null)
+
+    const focusHandler = () => {
+      isActive.value = true
+    }
+    const blurHandler = () => {
+      isActive.value = false
+    }
+
+    onMounted(() => {
+      mapTop.value.addEventListener('focus', focusHandler, true)
+      mapTop.value.addEventListener('blur', blurHandler, true)
+    })
+    onUnmounted(() => {
+      mapTop.value.removeEventListener('focus', focusHandler, true)
+      mapTop.value.removeEventListener('blur', blurHandler, true)
+    })
+
+    return { mapTop, isActive }
+  },
   data() {
     return {
       zoom: 15,
       latLon: randArray(),
       center: [lat, lon],
+      // => DEMO with dynamic adding places to the Leaflet map:
+      // https://codesandbox.io/s/qlznv9o5wj?file=/src/components/LeafletMap.vue
+
       // defaultMarkerIcon: L.icon({
       //   iconUrl: 'e.jpg',
       //   iconSize: [150, 100],

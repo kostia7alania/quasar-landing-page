@@ -771,9 +771,17 @@
           </div>
         </div>
 
+        <!-- row mobile -->
+        <div class="ец-block md:tw-hidden tw-mt-9">
+          <div class="tw-text-blue-1 tw-font-bold">Our values</div>
+        </div>
         <!-- row -->
         <div
-          class="tw-flex tw-justify-between tw-text-left tw-gap-x-3 tw-mt-16"
+          class="
+            tw-flex tw-justify-between tw-text-left tw-gap-x-3 tw-mt-5
+            md:tw-mt-8
+            lg:tw-mt-16
+          "
         >
           <div
             class="
@@ -836,17 +844,38 @@
                 Let technology change life
               </div>
             </div>
+
+            <!-- row mobile -->
+            <div class="ец-block md:tw-hidden tw-mt-9">
+              <div class="tw-text-blue-1 tw-font-bold">
+                Open a multi-diverse office environment
+              </div>
+            </div>
+
             <!-- card 4 -->
-            <div id="sub-section-2" class="tw-mt-9 tw-rounded-lg">
+            <div id="sub-section-2" class="tw-mt-5 md:tw-mt-9 tw-rounded-lg">
               <client-only>
                 <SliderSection />
               </client-only>
             </div>
 
+            <!-- row mobile -->
+            <div class="ец-block md:tw-hidden tw-mt-9">
+              <div class="tw-text-blue-1 tw-font-bold">
+                Everyone has a growing opportunity
+              </div>
+            </div>
+
             <!-- card 5 -->
             <div
               id="sub-section-3"
-              class="tw-bg-white tw-p-6 md:tw-p-7 tw-mt-9 tw-rounded-lg"
+              class="
+                tw-bg-white tw-p-6
+                md:tw-p-7
+                tw-mt-5
+                md:tw-mt-9
+                tw-rounded-lg
+              "
             >
               <div
                 class="
@@ -886,6 +915,14 @@
                 each other and make themselves better.
               </div>
             </div>
+
+            <!-- row mobile -->
+            <div class="ец-block md:tw-hidden tw-mt-9">
+              <div class="tw-text-blue-1 tw-font-bold">
+                Company employee benefits
+              </div>
+            </div>
+
             <!-- card 7 -->
             <div
               id="sub-section-4"
@@ -896,7 +933,9 @@
                 tw-py-4
                 md:tw-py-6
                 lg:tw-py-12
-                tw-mt-9 tw-rounded-lg
+                tw-mt-5
+                md:tw-mt-9
+                tw-rounded-lg
               "
             >
               <div

@@ -150,7 +150,7 @@
                 src="/assets/images/office-location.png"
                 alt="Company Ceiling"
               /> -->
-              <MapTop class="map-top" style="height: 200px" />
+              <MapTop is-hide-title class="map-top" style="height: 200px" />
             </div>
           </div>
         </div>
@@ -1065,7 +1065,11 @@
           src="/assets/images/map-bottom.png"
           alt="Contacts Map"
         /> -->
-        <MapTop class="tw-w-full" style="height: calc(100vh - 450px)" />
+        <MapTop
+          class="tw-w-full"
+          is-active-popup
+          style="height: calc(100vh - 450px)"
+        />
       </div>
     </section>
 

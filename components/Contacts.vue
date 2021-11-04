@@ -1,7 +1,10 @@
 <template>
   <div class="">
     <!--Title-->
-    <div class="tw-flex tw-justify-between tw-items-center tw-pb-3">
+    <div
+      v-if="!isHideTitle"
+      class="tw-flex tw-justify-between tw-items-center tw-pb-3"
+    >
       <div
         style="letter-spacing: -1.584px; font-size: 48px"
         class="tw-font-bold"
@@ -27,5 +30,8 @@ import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   name: 'Contacts',
+  props: {
+    isHideTitle: { type: Boolean, default: false },
+  },
 })
 </script>

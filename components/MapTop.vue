@@ -32,13 +32,20 @@
           </l-popup>
         </l-marker> -->
           <l-marker
-            :ref="'mapMarker' + 50"
+            ref="mapMarker"
             :key="'current-accommodation'"
             name="accos-list-item"
             :lat-lng="[center[0], center[1]]"
           >
-            <l-popup class="leaflet-popup-component">
-              <Contacts class="tw-py-4 tw-text-left tw-px-6" />
+            <l-popup
+              ref="popup"
+              :lat-lng="[center[0], center[1]]"
+              class="leaflet-popup-component"
+            >
+              <Contacts
+                :is-hide-title="isHideTitle"
+                class="tw-py-4 tw-text-left tw-px-6"
+              />
             </l-popup>
           </l-marker>
           <!-- <l-marker :lat-lng="[51, 6]" :icon="currentAccoIcon"></l-marker> -->
@@ -77,9 +84,22 @@ export default defineComponent({
   components: {
     Contacts,
   },
+  props: {
+    isActivePopup: { type: Boolean, default: false },
+    isHideTitle: { type: Boolean, default: false },
+  },
   setup(/* _, { refs } */) {
     const isActive: Ref<boolean> = ref(false)
     const mapTop: Ref<any> = ref(null)
+
+    // type openPopup = () => void
+
+    interface IMarker {
+      mapObject: {
+        openPopup: () => void
+      }
+    }
+    const mapMarker: Ref<IMarker | null> = ref(null)
 
     const focusHandler = () => {
       isActive.value = true
@@ -92,12 +112,13 @@ export default defineComponent({
       mapTop.value.addEventListener('focus', focusHandler, true)
       mapTop.value.addEventListener('blur', blurHandler, true)
     })
+
     onUnmounted(() => {
       mapTop.value.removeEventListener('focus', focusHandler, true)
       mapTop.value.removeEventListener('blur', blurHandler, true)
     })
 
-    return { mapTop, isActive }
+    return { mapMarker, mapTop, isActive }
   },
   data() {
     return {
@@ -137,6 +158,8 @@ export default defineComponent({
       this.center = center
     },
     ready() {
+      if (this.isActivePopup) this.mapMarker?.mapObject?.openPopup()
+
       /*
      this.map = this.$refs.map.leafletObject
       L.control.scale().addTo(this.map)
@@ -191,3 +214,17 @@ export default defineComponent({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+::v-deep {
+  .leaflet-popup-content {
+    margin: 0px;
+  }
+  .leaflet-container a.leaflet-popup-close-button {
+    font-size: 2em;
+    top: 14px;
+    right: 14px;
+    padding: 0;
+  }
+}
+</style>

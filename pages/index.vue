@@ -1065,11 +1065,7 @@
           src="/assets/images/map-bottom.png"
           alt="Contacts Map"
         /> -->
-        <MapTop
-          class="tw-w-full"
-          is-active-popup
-          style="height: calc(100vh - 450px)"
-        />
+        <MapTop class="tw-w-full map-bottom" is-active-popup />
       </div>
     </section>
 
@@ -1077,7 +1073,18 @@
     footer
     -->
     <footer class="text-gray-3 tw-flex tw-items-center tw-justify-center">
-      <div class="content-width tw-m-auto tw-my-8 tw-mx-4 tw-px-2 xl:tw-px-0">
+      <div
+        class="
+          content-width
+          tw-m-auto tw-my-5
+          md:tw-my-8
+          tw-mx-4 tw-px-2
+          xl:tw-px-0
+          tw-text-xs
+          md:tw-text-base
+          lg:tw-text-lg
+        "
+      >
         © 2021 Fire Phoenix Trading L.L.C, Inc. All rights reserved.
       </div>
     </footer>
@@ -1156,6 +1163,13 @@ export default defineComponent({
         border-radius: 10px;
       }
     }
+  }
+}
+
+.map-bottom {
+  height: calc(100vh - 450px);
+  @media (max-width: 770px) {
+    height: calc(100vh - 250px);
   }
 }
 </style>

@@ -2,12 +2,13 @@
   <header
     class="
       app-header
-      tw-flex tw-sticky tw-top-0 tw-bg-white tw-items-center tw-justify-between
+      tw-flex tw-bg-gray-100 tw-items-center tw-justify-between
+      dark:tw-bg-black dark:tw-text-gray-300
     "
   >
     <!-- left -->
     <div
-      class="tw-ml-4 sm:tw-ml-6 md:tw-ml-8 lg:tw-ml-14 xlg:tw-ml-16 tw-order-1"
+      class="tw-ml-3 sm:tw-ml-4 md:tw-ml-6 lg:tw-ml-14 xlg:tw-ml-16 tw-order-1"
     >
       <div class="logo-wrapper">
         <a href="#section-1" @click.prevent="scrollToId('#section-1')">
@@ -43,11 +44,25 @@
       </div>
     </div>
     <!-- center -->
-    <MainHeaderMenu class="tw-order-3 md:tw-order-2" />
+    <div class="tw-order-3 md:tw-order-2">
+      <MainHeaderMenu />
+    </div>
     <!-- right -->
     <div
-      class="tw-mr-6 md:tw-mr-14 tw-ml-auto md:tw-ml-0 tw-order-2 md:tw-order-3"
+      class="
+        tw-mr-6
+        md:tw-mr-10
+        lg:tw-mr-14
+        tw-ml-auto
+        md:tw-ml-0
+        tw-order-2
+        md:tw-order-3
+        tw-gap-5
+        lg:tw-gap-8
+        tw-flex tw-items-center
+      "
     >
+      <DarkToggle />
       <HeaderJoinUs />
     </div>
   </header>
@@ -57,6 +72,7 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 import HeaderJoinUs from './HeaderJoinUs.vue'
 import MainHeaderMenu from './MainHeaderMenu.vue'
+import DarkToggle from './DarkToggle.vue'
 
 import { linksMap } from '@/layouts/constants/linksMap'
 import { useScrollEventTop } from '@/compositions/scrollEvent'
@@ -68,6 +84,7 @@ export default defineComponent({
   components: {
     HeaderJoinUs,
     MainHeaderMenu,
+    DarkToggle,
   },
   setup(/* _, ctx: SetupContext */) {
     const { activeLink } = useScrollEventTop()
@@ -79,10 +96,8 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .app-header {
-  height: 99px;
   z-index: 1111;
-  @media (max-width: 768px) {
-    height: 65px;
+  @media (max-width: 770px) {
     .logo {
       width: 32px;
     }

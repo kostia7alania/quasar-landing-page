@@ -7,7 +7,7 @@
         tw-md:max-w-md
         tw-mx-auto
         tw-rounded-md
-        tw-shadow-lg
+        tw-shadow-2xl
         tw-z-50
         tw-overflow-y-auto
         tw-flex
@@ -77,12 +77,12 @@ export default defineComponent({
     }
 
     onMounted(() => {
-      document.body.classList.add('tw-overflow-hidden')
+      // document.body.classList.add('tw-overflow-hidden')
       document.addEventListener('keydown', keydownHandler)
     })
 
     onUnmounted(() => {
-      document.body.classList.remove('tw-overflow-hidden')
+      // document.body.classList.remove('tw-overflow-hidden')
       document.removeEventListener('keydown', keydownHandler)
     })
     return {

@@ -1,12 +1,11 @@
 <template>
-  <div class="tw-sticky tw-top-6" style="letter-spacing: -0.528px">
+  <div class="tw-sticky tw-top-30" style="letter-spacing: -0.528px">
     <div
       v-for="{ title, id } in linksMapBottom"
       :key="id"
-      class="tw-my-4"
+      class="tw-my-4 ellipsis tw-cursor-pointer"
       :class="{
         'link--active tw-font-bold': id === activeLinkBottom,
-        'tw-cursor-pointer': id !== activeLinkBottom,
       }"
       @click.prevent="scrollToId(id)"
     >

@@ -7,7 +7,7 @@
 }
 
 #__nuxt {
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 html {
@@ -92,6 +92,70 @@ $primary-color: #416ff4;
 .bg-cotton-boll-1 {
   background-color: #e8efff;
 }
+
 .bg-cotton-boll-2 {
   background-color: #f4f7ff;
+}
+
+@mixin transition-mixin {
+  transition: 1s;
+}
+
+.tw-dark {
+  .bg-cotton-boll-1 {
+    background-color: #171c25;
+  }
+  .bg-cotton-boll-2 {
+    background-color: #2d3748;
+  }
+
+  .tw-bg-white {
+    background-color: #2d3748;
+  }
+
+  [fill='white'] {
+    fill: #2d3748;
+  }
+
+  .fix-svg-dark-back [fill='white'] {
+    fill: #9eafdf;
+  }
+
+  .fix-svg-dark-back-cartoon [fill='#1D2534'] {
+    fill: #111b3a;
+  }
+
+  .text-black-2 {
+    color: #f0f0f0;
+  }
+  .text-black-3 {
+    color: #f0f0f0;
+  }
+  .text-gray-2 {
+    color: rgb(209, 213, 219); // dark:tw-text-gray-300
+  }
+  .fix-svg-icon path {
+    fill: white;
+  }
+  .fix-svg-icon .fix-svg-icon__backdrop {
+    fill: #416ff4;
+  }
+}
+
+.ellipsis {
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis;
+}
+
+.bg-cotton-boll-1,
+.bg-cotton-boll-2,
+.tw-bg-white,
+.text-black-2,
+.text-black-3,
+.text-gray-2,
+.fix-svg-dark-back-cartoon [fill='#1D2534'],
+[fill='white'],
+[class^='dark'] {
+  @include transition-mixin;
 }

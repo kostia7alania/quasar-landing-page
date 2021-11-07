@@ -1,7 +1,7 @@
 <template>
   <div>
     <nuxt-img
-      class="tw-h-78 md:tw-h-auto"
+      class="tw-h-78 md:tw-h-auto tw-rounded-xl"
       src="/assets/images/online-game-cartoon-background.jpg"
       alt="online game cartoon background"
     />
@@ -88,8 +88,12 @@
           tw-text-white tw-font-bold
         "
       >
-        <span class="tw-hidden md:tw-block">Play Poker</span>
-        <span class="tw-block md:tw-hidden">Online Game</span>
+        <span class="tw-hidden md:tw-block dark:tw-text-gray-100"
+          >Play Poker</span
+        >
+        <span class="tw-block md:tw-hidden dark:tw-text-gray-100"
+          >Online Game</span
+        >
       </div>
     </div>
 
@@ -106,8 +110,10 @@
         tw-font-bold
       "
     >
-      <span class="tw-hidden md:tw-block">Online Game</span>
-      <div class="tw-block md:tw-hidden">
+      <span class="tw-hidden md:tw-block dark:tw-text-gray-300"
+        >Online Game</span
+      >
+      <div class="tw-block md:tw-hidden dark:tw-text-gray-300">
         <div>Play</div>
         <div class="tw-w-24 tw-flex tw-justify-end">Poker</div>
       </div>

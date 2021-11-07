@@ -21,7 +21,8 @@ export const scrollToId = (id: string) => {
     // const targ = document.querySelector('.ps') as HTMLElement
     // setVerticalScrollPosition(targ, offset, duration)
     const options = {
-      container: '.app-main',
+      // container: '.app-main',
+      container: 'html',
       offset: 0,
       lazy: true,
       duration: 10,

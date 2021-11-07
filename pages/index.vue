@@ -17,6 +17,7 @@
           lg:tw-mt-24
           xl:tw-mt-28
           tw-mx-12 tw-text-center
+          dark:tw-text-gray-100
         "
       >
         Fire Phoenix Trading&nbsp;L.L.C
@@ -66,7 +67,13 @@
             xl:tw-mt-28
           "
         >
-          <div class="tw-flex-1 tw-font-bold tw-text-xl sm:tw-text-4.5xl">
+          <div
+            class="
+              tw-flex-1 tw-font-bold tw-text-xl
+              sm:tw-text-4.5xl
+              dark:tw-text-gray-100
+            "
+          >
             About us
           </div>
           <div
@@ -92,8 +99,10 @@
               tw-rounded-lg
             "
           >
-            <div class="tw-text-lg tw-mb-4 tw-font-bold">Company history</div>
-            <div>
+            <div class="tw-text-lg tw-mb-4 tw-font-bold dark:tw-text-gray-100">
+              Company history
+            </div>
+            <div class="dark:tw-text-gray-300">
               ACCURATE META - is a company with a purpose to bring amusement to
               the world. It’s an innovative technology company for green
               services, was formally established in October 2013. The game
@@ -113,10 +122,15 @@
               tw-rounded-lg
             "
           >
-            <div class="tw-text-lg tw-mb-4 tw-text-black tw-font-bold">
+            <div
+              class="
+                tw-text-lg tw-mb-4 tw-text-black tw-font-bold
+                dark:tw-text-gray-100
+              "
+            >
               Social responsibility
             </div>
-            <div class="text-black-3">
+            <div class="text-black-3 dark:tw-text-gray-300">
               We adhere to the intention of the company, the business
               techniques, the power of technology, bringing more minor and
               beautiful changes to the world, and we always have our products to
@@ -137,8 +151,10 @@
           style="letter-spacing: -0.5px"
         >
           <div class="tw-m-4" style="flex-basis: 362px">
-            <div class="tw-text-lg tw-mb-3 tw-font-bold">Office location</div>
-            <div>
+            <div class="tw-text-lg tw-mb-3 tw-font-bold dark:tw-text-gray-100">
+              Office location
+            </div>
+            <div class="dark:tw-text-gray-300">
               The head office is located in Dubai, and there are cooperation
               teams around the world.
             </div>
@@ -184,6 +200,7 @@
               tw-text-center tw-font-bold tw-text-xl
               md:tw-text-3xl
               lg:tw-text-4.5xl
+              dark:tw-text-gray-100
             "
           >
             Technology products
@@ -197,6 +214,7 @@
               lg:tw-mt-6
               tw-text-base
               lg:tw-text-lg
+              dark:tw-text-gray-300
             "
             style="letter-spacing: -0.5px; max-width: 748px"
           >
@@ -230,6 +248,7 @@
                 md:tw-text-xl
                 lg:tw-text-3xl
                 tw-font-bold
+                dark:tw-text-gray-100
               "
             >
               Block chain wallet product
@@ -266,6 +285,7 @@
                 md:tw-text-xl
                 lg:tw-text-3xl
                 tw-font-bold
+                dark:tw-text-gray-100
               "
             >
               Chat Software
@@ -313,7 +333,14 @@
           xl:tw-px-0
         "
       >
-        <div class="tw-font-bold tw-text-xl md:tw-text-3xl lg:tw-text-4.5xl">
+        <div
+          class="
+            tw-font-bold tw-text-xl
+            md:tw-text-3xl
+            lg:tw-text-4.5xl
+            dark:tw-text-gray-100
+          "
+        >
           Technical Team
         </div>
 
@@ -335,10 +362,12 @@
                   viewBox="0 0 60 60"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  class="fix-svg-icon"
                 >
                   <path
                     d="M30 60C46.5685 60 60 46.5685 60 30C60 13.4315 46.5685 0 30 0C13.4315 0 0 13.4315 0 30C0 46.5685 13.4315 60 30 60Z"
                     fill="white"
+                    class="fix-svg-icon__backdrop"
                   />
                   <path
                     d="M32.3441 47.6559H21.3333C21.0753 47.6559 20.9032 47.4838 20.9032 47.2258C20.9032 46.9677 21.0753 46.7957 21.3333 46.7957H32.3441C32.6022 46.7957 32.7742 46.9677 32.7742 47.2258C32.7742 47.4838 32.5591 47.6559 32.3441 47.6559Z"
@@ -402,11 +431,21 @@
                   />
                 </svg>
 
-                <div class="tw-text-lg md:tw-text-xl lg:tw-text-2xl tw-ml-5">
+                <div
+                  class="
+                    tw-text-lg
+                    md:tw-text-xl
+                    lg:tw-text-2xl
+                    tw-ml-5
+                    dark:tw-text-gray-100
+                  "
+                >
                   Specialization
                 </div>
               </div>
-              <div class="tw-mt-3 text-gray-1 tw-text-base">
+              <div
+                class="tw-mt-3 text-gray-1 tw-text-base dark:tw-text-gray-300"
+              >
                 We only recruit people of various professions with the highest
                 talent to ensure that our products are high quality and it takes
                 dominant position in international competition.
@@ -419,6 +458,7 @@
             >
               <div class="tw-flex-1 tw-flex tw-items-center tw-font-bold">
                 <svg
+                  class="fix-svg-icon"
                   width="60"
                   height="60"
                   viewBox="0 0 60 60"
@@ -428,6 +468,7 @@
                   <path
                     d="M30 60C46.5685 60 60 46.5685 60 30C60 13.4315 46.5685 0 30 0C13.4315 0 0 13.4315 0 30C0 46.5685 13.4315 60 30 60Z"
                     fill="white"
+                    class="fix-svg-icon__backdrop"
                   />
                   <path
                     d="M29.6774 48.4732C24.5591 48.4732 19.828 45.7205 17.2473 41.2904C16 39.1398 15.3548 36.6452 15.3548 34.1506V34.1076C15.3548 31.957 15.871 29.8065 16.7742 27.914C16.8602 27.699 17.1183 27.613 17.3333 27.699C17.5484 27.785 17.6344 28.0431 17.5484 28.2581C16.6882 30.0646 16.2151 32.0861 16.2151 34.1076V34.1506C16.2151 36.5162 16.8172 38.8388 17.9785 40.8603C20.3871 45.0323 24.8602 47.613 29.6344 47.613H29.8925C36.3011 47.4839 41.7634 42.8388 42.9247 36.5592C43.0538 35.785 43.1398 34.9678 43.1398 34.1506V33.5484C43.0538 31.699 42.6237 29.9355 41.8064 28.2581C41.7204 28.0431 41.8064 27.785 42.0215 27.699C42.2366 27.613 42.4946 27.699 42.5806 27.914C43.4409 29.6775 43.914 31.5699 44 33.5484V34.1506C44 35.0108 43.914 35.871 43.7849 36.7312C42.5806 43.4409 36.7312 48.3872 29.9355 48.5162H29.6774V48.4732Z"
@@ -475,11 +516,21 @@
                   />
                 </svg>
 
-                <div class="tw-text-lg md:tw-text-xl lg:tw-text-2xl tw-ml-5">
+                <div
+                  class="
+                    tw-text-lg
+                    md:tw-text-xl
+                    lg:tw-text-2xl
+                    tw-ml-5
+                    dark:tw-text-gray-100
+                  "
+                >
                   Internalization
                 </div>
               </div>
-              <div class="tw-mt-3 text-gray-1 tw-text-base">
+              <div
+                class="tw-mt-3 text-gray-1 tw-text-base dark:tw-text-gray-300"
+              >
                 We have an international team, including staff from China,
                 Russia, Ukraine, Kazakhstan, India and other countries.
               </div>
@@ -491,6 +542,7 @@
             >
               <div class="tw-flex-1 tw-flex tw-items-center tw-font-bold">
                 <svg
+                  class="fix-svg-icon"
                   width="60"
                   height="60"
                   viewBox="0 0 60 60"
@@ -498,6 +550,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
+                    class="fix-svg-icon__backdrop"
                     d="M30 60C46.5685 60 60 46.5685 60 30C60 13.4315 46.5685 0 30 0C13.4315 0 0 13.4315 0 30C0 46.5685 13.4315 60 30 60Z"
                     fill="white"
                   />
@@ -559,11 +612,21 @@
                   />
                 </svg>
 
-                <div class="tw-text-lg md:tw-text-xl lg:tw-text-2xl tw-ml-5">
+                <div
+                  class="
+                    tw-text-lg
+                    md:tw-text-xl
+                    lg:tw-text-2xl
+                    tw-ml-5
+                    dark:tw-text-gray-100
+                  "
+                >
                   Technology
                 </div>
               </div>
-              <div class="tw-mt-3 text-gray-1 tw-text-base">
+              <div
+                class="tw-mt-3 text-gray-1 tw-text-base dark:tw-text-gray-300"
+              >
                 Employees from all over the world communicate closely through
                 online technology, overcome the difficulties of time differences
                 and geographies, perfect unconstrained connection, close
@@ -577,6 +640,7 @@
             >
               <div class="tw-flex-1 tw-flex tw-items-center tw-font-bold">
                 <svg
+                  class="fix-svg-icon"
                   width="60"
                   height="60"
                   viewBox="0 0 60 60"
@@ -586,6 +650,7 @@
                   <path
                     d="M30 60C46.5685 60 60 46.5685 60 30C60 13.4315 46.5685 0 30 0C13.4315 0 0 13.4315 0 30C0 46.5685 13.4315 60 30 60Z"
                     fill="white"
+                    class="fix-svg-icon__backdrop"
                   />
                   <path
                     d="M29.8495 24.1584C26.1075 24.1584 23.0968 21.2065 23.0968 17.6308C23.0968 14.0136 26.1505 11.1032 29.8495 11.1032C33.5914 11.1032 36.6021 14.0552 36.6021 17.6308C36.6021 21.248 33.5914 24.1584 29.8495 24.1584ZM29.8495 11.9348C26.5806 11.9348 23.957 14.5126 23.957 17.6308C23.957 20.7491 26.6236 23.3269 29.8495 23.3269C33.1183 23.3269 35.7419 20.7491 35.7419 17.6308C35.7419 14.5126 33.1183 11.9348 29.8495 11.9348Z"
@@ -613,11 +678,21 @@
                   />
                 </svg>
 
-                <div class="tw-text-lg md:tw-text-xl lg:tw-text-2xl tw-ml-5">
+                <div
+                  class="
+                    tw-text-lg
+                    md:tw-text-xl
+                    lg:tw-text-2xl
+                    tw-ml-5
+                    dark:tw-text-gray-100
+                  "
+                >
                   Humanization
                 </div>
               </div>
-              <div class="tw-mt-3 text-gray-1 tw-text-base">
+              <div
+                class="tw-mt-3 text-gray-1 tw-text-base dark:tw-text-gray-300"
+              >
                 Team members help each other, effectively communicate, and work
                 together for a goal.
               </div>
@@ -647,12 +722,19 @@
                 tw-flex-1 tw-font-bold tw-text-xl
                 md:tw-text-3xl
                 lg:tw-text-4.5xl
+                dark:tw-text-gray-100
               "
             >
               Operation Team
             </div>
             <div
-              class="tw-flex-1 text-black-2 tw-leading-6 tw-mt-3 lg:tw-mt-0"
+              class="
+                tw-flex-1
+                text-black-2
+                tw-leading-6 tw-mt-3
+                lg:tw-mt-0
+                dark:tw-text-gray-300
+              "
               style="letter-spacing: -0.5px"
             >
               In addition to having a professional technical team, we have a
@@ -672,9 +754,11 @@
               style="flex-basis: 288px"
             >
               <div class="tw-flex-1">
-                <div class="tw-font-bold tw-text-lg">David Herison</div>
+                <div class="tw-font-bold tw-text-lg dark:tw-text-gray-100">
+                  David Herison
+                </div>
               </div>
-              <div class="text-gray-1 tw-text-sm">
+              <div class="text-gray-1 tw-text-sm dark:tw-text-gray-300">
                 Director of Public Relations
               </div>
               <div class="tw-flex tw-justify-center tw-mt-3">
@@ -690,9 +774,11 @@
               style="flex-basis: 288px"
             >
               <div class="tw-flex-1">
-                <div class="tw-font-bold tw-text-lg">Liana Garsiz</div>
+                <div class="tw-font-bold tw-text-lg dark:tw-text-gray-100">
+                  Liana Garsiz
+                </div>
               </div>
-              <div class="text-gray-1 tw-text-sm">
+              <div class="text-gray-1 tw-text-sm dark:tw-text-gray-300">
                 Director of the Development
               </div>
               <div class="tw-flex tw-justify-center tw-mt-3">
@@ -708,9 +794,11 @@
               style="flex-basis: 288px"
             >
               <div class="tw-flex-1">
-                <div class="tw-font-bold tw-text-lg">Anna Fernandez</div>
+                <div class="tw-font-bold tw-text-lg dark:tw-text-gray-100">
+                  Anna Fernandez
+                </div>
               </div>
-              <div class="text-gray-1 tw-text-sm">
+              <div class="text-gray-1 tw-text-sm dark:tw-text-gray-300">
                 Director of the Marketing Department
               </div>
               <div class="tw-flex tw-justify-center tw-mt-3">
@@ -757,13 +845,14 @@
               tw-text-left tw-font-bold tw-text-xl
               md:tw-text-3xl
               lg:tw-text-4.5xl
+              dark:tw-text-gray-100
             "
             style="flex-basis: 400px"
           >
             Join Us
           </div>
           <div
-            class="tw-text-left text-black-2 text-gray-1"
+            class="tw-text-left text-black-2 text-gray-1 dark:tw-text-gray-300"
             style="max-width: 748px"
           >
             <div>Current Recruitment position:</div>
@@ -806,6 +895,7 @@
                   md:tw-text-xl
                   lg:tw-text-2xl
                   tw-font-bold
+                  dark:tw-text-gray-300
                 "
                 style="max-width: 478px"
               >
@@ -822,6 +912,7 @@
                   md:tw-text-xl
                   lg:tw-text-2xl
                   tw-font-bold
+                  dark:tw-text-gray-300
                 "
                 style="max-width: 478px"
               >
@@ -838,6 +929,7 @@
                   md:tw-text-xl
                   lg:tw-text-2xl
                   tw-font-bold
+                  dark:tw-text-gray-300
                 "
                 style="max-width: 478px"
               >
@@ -886,9 +978,9 @@
                 "
               >
                 <IconPromotion />
-                <div class="tw-ml-6">Promotion</div>
+                <div class="tw-ml-6 dark:tw-text-gray-100">Promotion</div>
               </div>
-              <div class="tw-flex-1 text-gray-2 tw-mt-5">
+              <div class="tw-flex-1 text-gray-2 tw-mt-5 dark:tw-text-gray-300">
                 Promotion is to organize future selection talents. Based on
                 position development channels, talent standards, promotion
                 process mechanisms, effectively identify, see and recognize the
@@ -907,9 +999,9 @@
                 "
               >
                 <IconProgress />
-                <div class="tw-ml-6">Progress</div>
+                <div class="tw-ml-6 dark:tw-text-gray-100">Progress</div>
               </div>
-              <div class="tw-flex-1 text-gray-2 tw-mt-5">
+              <div class="tw-flex-1 text-gray-2 tw-mt-5 dark:tw-text-gray-300">
                 We will make new people entering the company quickly integrate
                 into the company's life. In this process, all employees help
                 each other and make themselves better.
@@ -947,7 +1039,7 @@
                 "
               >
                 <IconTeamBuilding />
-                <div class="tw-ml-6">Team building</div>
+                <div class="tw-ml-6 dark:tw-text-gray-100">Team building</div>
               </div>
             </div>
 
@@ -971,6 +1063,7 @@
                       lg:tw-text-2xl
                       tw-font-bold tw-mt-2
                       md:tw-mt-4
+                      dark:tw-text-gray-100
                     "
                   >
                     Providing business lunch
@@ -995,6 +1088,7 @@
                       lg:tw-text-2xl
                       tw-font-bold tw-mt-2
                       md:tw-mt-4
+                      dark:tw-text-gray-100
                     "
                   >
                     High-end hotel accommodation
@@ -1035,6 +1129,7 @@
                 tw-text-left tw-font-bold tw-text-xl
                 md:tw-text-3xl
                 lg:tw-text-4.5xl
+                dark:tw-text-gray-100
               "
               style="flex-basis: 400px"
             >

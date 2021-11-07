@@ -5,6 +5,7 @@
     v-bind="$attrs"
     viewBox="0 0 144 144"
     fill="none"
+    class="fix-svg-icon"
     xmlns="http://www.w3.org/2000/svg"
   >
     <g>

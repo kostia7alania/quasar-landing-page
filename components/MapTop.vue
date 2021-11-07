@@ -12,6 +12,7 @@
   <div ref="mapTop" style="width: 100%" tabindex="0">
     <div
       style="width: 100%; height: 100%"
+      class="tw-transition tw-duration-500 tw-ease-out-in"
       :class="{ 'tw-filter tw-grayscale tw-pointer-events-none': !isActive }"
     >
       <client-only>
@@ -79,6 +80,8 @@ const randArray = () => [
   },
 ]
 
+let tm: ReturnType<typeof setTimeout>
+
 export default defineComponent({
   name: 'MapTop',
   components: {
@@ -97,15 +100,20 @@ export default defineComponent({
     interface IMarker {
       mapObject: {
         openPopup: () => void
+        closePopup: () => void
       }
     }
     const mapMarker: Ref<IMarker | null> = ref(null)
 
     const focusHandler = () => {
       isActive.value = true
+      clearTimeout(tm)
     }
     const blurHandler = () => {
       isActive.value = false
+      tm = setTimeout(() => {
+        mapMarker?.value?.mapObject?.closePopup()
+      }, 3000)
     }
 
     onMounted(() => {

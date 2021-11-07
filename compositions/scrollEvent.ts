@@ -8,17 +8,18 @@ let tm: ReturnType<typeof setTimeout>
 
 function runAllHandlers() {
   clearTimeout(tm)
-  const target = window?.event?.target as HTMLInputElement
+  // const target = window?.event?.target as HTMLInputElement
 
   tm = setTimeout(() => {
-    const position: number = target?.scrollTop
+    const position: number = window.pageYOffset // target?.scrollTop
     handlers.forEach((handler) => handler(position))
   }, 15)
 }
 
 if (process.client) {
-  const targ = document.querySelector('.app-main') as HTMLElement
-  targ.addEventListener('scroll', runAllHandlers)
+  // .app-main
+  // const targ = document.querySelector('html') as HTMLElement
+  document.addEventListener('scroll', runAllHandlers)
 }
 
 export function useScrollEventTop() {

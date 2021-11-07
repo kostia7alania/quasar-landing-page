@@ -8,6 +8,7 @@
         <li v-for="{ title, id } in linksMap" :key="id" class="link-item">
           <a
             :class="{ 'link--active': id === activeLink }"
+            class="hover:tw-text-gray-500"
             :href="id"
             @click.prevent="scrollToId(id)"
           >

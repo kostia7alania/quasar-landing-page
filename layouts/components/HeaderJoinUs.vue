@@ -3,7 +3,7 @@
     style="width: 55px"
     class="tw-text-center tw-flex tw-justify-center sm:tw-relative"
   >
-    <button
+    <VButton
       :class="classComputed"
       class="button__join-us"
       :style="isActiveContacts ? 'width: 42px' : 'border-radius: 33px'"
@@ -22,7 +22,7 @@
           fill="white"
         />
       </svg>
-    </button>
+    </VButton>
     <HeaderModal
       v-if="isActiveContacts"
       class="join-us-modal"
@@ -38,10 +38,11 @@ import { defineComponent, ref } from '@nuxtjs/composition-api'
 import HeaderModal from './HeaderModal.vue'
 
 import Contacts from '@/components/Contacts.vue'
+import VButton from '@/components/ui/VButton.vue'
 
 export default defineComponent({
   name: 'HeaderJoinUs',
-  components: { HeaderModal, Contacts },
+  components: { HeaderModal, Contacts, VButton },
   setup() {
     const isActiveContacts = ref(false)
 

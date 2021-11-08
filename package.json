@@ -44,6 +44,7 @@
     "@nuxtjs/global-components": "^0.6.1",
     "@nuxtjs/style-resources": "^1.2.1",
     "@nuxtjs/tailwindcss": "^4.2.0",
+    "@types/node": "^16.11.6",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",

@@ -7,6 +7,8 @@
     >
       <div
         class="
+          tw-transform tw--translate-x-full
+          main-title
           tw-font-bold tw-text-2 tw-text-3.5xl
           md:tw-text-4.5xl
           lg:tw-text-5xl
@@ -22,17 +24,19 @@
       >
         Fire Phoenix Trading&nbsp;L.L.C
       </div>
-      <div
-        class="
-          tw-m-auto tw-text-center tw-text-base
-          lg:tw-text-lg
-          tw-mt-5
-          text-black-2
-        "
-        style="max-width: 402px; letter-spacing: -0.66px"
-      >
-        <div class="tw-mx-12">
-          Have the courage to explore and persist in innovation!
+      <div class="main-description tw-transform tw-translate-x-full">
+        <div
+          class="
+            tw-m-auto tw-text-center tw-text-base
+            lg:tw-text-lg
+            tw-mt-5
+            text-black-2
+          "
+          style="max-width: 402px; letter-spacing: -0.66px"
+        >
+          <div class="tw-mx-12">
+            Have the courage to explore and persist in innovation!
+          </div>
         </div>
       </div>
       <div
@@ -48,14 +52,17 @@
         "
       >
         <nuxt-img
-          class="tw-w-full tw-rounded-t-lg"
+          class="main-image tw-w-full tw-rounded-t-lg"
           src="/assets/images/company-ceiling-2.jpg"
           alt="Company Ceiling"
         />
       </div>
     </section>
     <!-- section 2 -->
-    <section id="section-2" class="tw-flex tw-justify-center">
+    <section
+      id="section-2"
+      class="scroll-blur-bottom tw-flex tw-justify-center"
+    >
       <div class="content-width tw-flex tw-justify-center tw-flex-col tw-mx-4">
         <div
           class="
@@ -69,6 +76,7 @@
         >
           <div
             class="
+              block-1
               tw-flex-1 tw-font-bold tw-text-xl
               sm:tw-text-4.5xl
               dark:tw-text-gray-100
@@ -77,7 +85,13 @@
             About us
           </div>
           <div
-            class="tw-flex-1 text-black-2 tw-leading-6 tw-mt-3 md:tw-mt-0"
+            class="
+              block-2
+              tw-flex-1
+              text-black-2
+              tw-leading-6 tw-mt-3
+              md:tw-mt-0
+            "
             style="letter-spacing: -0.5px"
           >
             We are a company specializing in network software development, the
@@ -93,16 +107,23 @@
         >
           <div
             class="
+              block-3
               bg-dark-1
               tw-flex-1 tw-text-white tw-p-4
               md:tw-p-7
               tw-rounded-lg
             "
           >
-            <div class="tw-text-lg tw-mb-4 tw-font-bold dark:tw-text-gray-100">
+            <div
+              class="
+                block-3__title
+                tw-text-lg tw-mb-4 tw-font-bold
+                dark:tw-text-gray-100
+              "
+            >
               Company history
             </div>
-            <div class="dark:tw-text-gray-300">
+            <div class="block-3__description dark:tw-text-gray-300">
               ACCURATE META - is a company with a purpose to bring amusement to
               the world. It’s an innovative technology company for green
               services, was formally established in October 2013. The game
@@ -112,6 +133,7 @@
           </div>
           <div
             class="
+              block-4
               bg-cotton-boll-2
               tw-flex-1
               text-black-2
@@ -124,13 +146,16 @@
           >
             <div
               class="
+                block-4__title
                 tw-text-lg tw-mb-4 tw-text-black tw-font-bold
                 dark:tw-text-gray-100
               "
             >
               Social responsibility
             </div>
-            <div class="text-black-3 dark:tw-text-gray-300">
+            <div
+              class="block-4__description text-black-4 dark:tw-text-gray-300"
+            >
               We adhere to the intention of the company, the business
               techniques, the power of technology, bringing more minor and
               beautiful changes to the world, and we always have our products to
@@ -147,19 +172,27 @@
             tw-items-center tw-mt-3
             md:tw-mt-5
             tw-leading-6 tw-gap-5 tw-rounded-lg
+            office-location__content
           "
           style="letter-spacing: -0.5px"
         >
-          <div class="tw-m-4" style="flex-basis: 362px">
-            <div class="tw-text-lg tw-mb-3 tw-font-bold dark:tw-text-gray-100">
+          <div class="block-5 tw-m-4" style="flex-basis: 362px">
+            <div
+              class="
+                block-5__title
+                office-location
+                tw-text-lg tw-mb-3 tw-font-bold
+                dark:tw-text-gray-100
+              "
+            >
               Office location
             </div>
-            <div class="dark:tw-text-gray-300">
+            <div class="block-5__description dark:tw-text-gray-300">
               The head office is located in Dubai, and there are cooperation
               teams around the world.
             </div>
           </div>
-          <div class="tw-flex-1 text-black-2 tw-m-4 md:tw-m-0">
+          <div class="block-6 tw-flex-1 text-black-2 tw-m-4 md:tw-m-0">
             <div class="tw-flex tw-justify-center">
               <!-- <nuxt-img
                 class="tw-h-30"
@@ -179,6 +212,7 @@
     <section
       id="section-3"
       class="
+        scroll-blur-bottom
         bg-cotton-boll-1
         tw-flex tw-justify-center tw-py-14
         sm:tw-py-26
@@ -197,6 +231,7 @@
         <div class="">
           <div
             class="
+              block-1
               tw-text-center tw-font-bold tw-text-xl
               md:tw-text-3xl
               lg:tw-text-4.5xl
@@ -207,6 +242,7 @@
           </div>
           <div
             class="
+              block-2
               tw-text-center tw-m-auto
               text-black-2
               tw-leading-6 tw-mt-3
@@ -225,7 +261,14 @@
           </div>
         </div>
         <!-- sub section -->
-        <div class="tw-bg-white lg:tw-flex tw-mt-9 tw-rounded-lg tw-relative">
+        <div
+          class="
+            section-3-block-1
+            tw-bg-white
+            lg:tw-flex
+            tw-mt-9 tw-rounded-lg tw-relative
+          "
+        >
           <div
             class="
               tw-flex tw-items-center
@@ -239,10 +282,13 @@
             "
             style="flex-basis: 300px"
           >
-            <BlockChainCartoonIcon class="tw-h-14 md:tw-h-28 lg:tw-h-32" />
+            <BlockChainCartoonIcon
+              class="section-3-block-1__icon tw-h-14 md:tw-h-28 lg:tw-h-32"
+            />
 
             <div
               class="
+                section-3-block-1__text
                 lg:tw-absolute
                 tw-left-9 tw-bottom-8 tw-text-lg
                 md:tw-text-xl
@@ -262,7 +308,9 @@
             "
             style="flex-basis: 771px"
           >
-            <BlockChainCartoon class="lg:tw-w-full tw-mx-9 lg:tw-mx-0" />
+            <BlockChainCartoon
+              class="section-3-block-1__svg lg:tw-w-full tw-mx-9 lg:tw-mx-0"
+            />
           </div>
         </div>
 
@@ -319,6 +367,7 @@
     <section
       id="section-4"
       class="
+        scroll-blur-bottom
         tw-flex tw-justify-center tw-my-14
         sm:tw-my-26
         md:tw-my-20
@@ -763,6 +812,7 @@
               </div>
               <div class="tw-flex tw-justify-center tw-mt-3">
                 <nuxt-img
+                  style="height: 261px"
                   src="/assets/images/team-david-herison.png"
                   alt="David Herison"
                 />
@@ -783,6 +833,7 @@
               </div>
               <div class="tw-flex tw-justify-center tw-mt-3">
                 <nuxt-img
+                  style="height: 261px"
                   src="/assets/images/team-liana-garsiz.png"
                   alt="Liana Garsiz"
                 />
@@ -803,6 +854,7 @@
               </div>
               <div class="tw-flex tw-justify-center tw-mt-3">
                 <nuxt-img
+                  style="height: 261px"
                   src="/assets/images/team-anna-fernandez.png"
                   alt="Anna Fernandez"
                 />
@@ -819,6 +871,7 @@
     <section
       id="section-5"
       class="
+        scroll-blur-bottom
         bg-cotton-boll-1
         tw-flex tw-justify-center tw-leading-6 tw-pt-14
         sm:tw-pt-26
@@ -1108,6 +1161,7 @@
     <section
       id="section-6"
       class="
+        scroll-blur-bottom
         bg-cotton-boll-1
         tw-pt-14
         sm:tw-pt-26
@@ -1234,7 +1288,7 @@ export default defineComponent({
     // },
   },
   mounted() {
-    doAnimate()
+    setTimeout(() => doAnimate(), 300)
   },
   methods: {
     // scrollHandler() {

@@ -148,6 +148,7 @@ $primary-color: #416ff4;
   text-overflow: ellipsis;
 }
 
+.scroll-blur-bottom,
 .bg-cotton-boll-1,
 .bg-cotton-boll-2,
 .tw-bg-white,
@@ -158,4 +159,14 @@ $primary-color: #416ff4;
 [fill='white'],
 [class^='dark'] {
   @include transition-mixin;
+}
+
+.scroll-blur-bottom__inactive {
+  filter: blur(4px);
+}
+
+#section-1,
+#section-2,
+#section-3 {
+  overflow: hidden;
 }

@@ -11,6 +11,8 @@ export const linksMap = [
 const reversedLinksMap = [...linksMap].reverse()
 
 export const findLink = (position: number) => {
+  if (position < 200) return linksMap[0] // fix first item on mobile
+
   const foundLink = reversedLinksMap.find(({ id }) => {
     const sectionDom = document.querySelector(id) as HTMLElement
     const { offsetTop: sectionTop, clientHeight: sectionHeight } = sectionDom

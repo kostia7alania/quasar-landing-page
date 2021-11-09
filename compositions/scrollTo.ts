@@ -23,7 +23,7 @@ export const scrollToId = (id: string) => {
     const options = {
       // container: '.app-main',
       container: 'html',
-      offset: 0,
+      offset: -100,
       lazy: true,
       duration: 10,
       onStart() {

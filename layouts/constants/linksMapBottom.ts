@@ -16,6 +16,7 @@ export const findLinkBottom = (position: number) => {
     if (position >= sectionTop - 100 - sectionHeight / 3) return true
     return false
   })
+  if (!foundLink) return linksMapBottom[0] // fix first
   return foundLink
 }
 export default linksMapBottom

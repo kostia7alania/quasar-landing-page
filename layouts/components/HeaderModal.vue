@@ -34,7 +34,9 @@
       "
     >
       <div
-        class="tw-absolute tw-w-full tw-h-full tw-bg-gray-900 tw-opacity-50"
+        class="
+          tw-absolute tw-w-full tw-h-full tw-bg-gray-900 tw-opacity-50 tw-z-50
+        "
         @click="close"
       ></div>
     </div>

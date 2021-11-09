@@ -2,7 +2,7 @@
   <!-- width="662" -->
   <!-- height="405" -->
   <svg
-    class="fix-svg-dark-back-cartoon fix-svg-dark-back"
+    class="anim-batch fix-svg-dark-back-cartoon fix-svg-dark-back"
     viewBox="0 0 662 405"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

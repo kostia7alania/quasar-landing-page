@@ -5,7 +5,7 @@
   >
     <VButton
       :class="classComputed"
-      class="button__join-us"
+      class="anim-batch-once button__join-us"
       :style="isActiveContacts ? 'width: 42px' : 'border-radius: 33px'"
       @click="setIsActiveContacts(!isActiveContacts)"
     >

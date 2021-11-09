@@ -1,6 +1,8 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+import { batchAnimate, batchAnimateWithLeave } from './bachAnimate'
+
 export function doAnimate(): void {
   // if (process.env.CLIENT) {
   if (!process.client) return
@@ -12,6 +14,10 @@ export function doAnimate(): void {
     rotation: 360,
     duration: 3,
   })
+
+  batchAnimate('.anim-batch-once')
+  // NOTE: it must be opacity: 0
+  batchAnimateWithLeave('.anim-batch')
 
   const tl = gsap.timeline()
 
@@ -43,7 +49,7 @@ export function doAnimate(): void {
 
   /* */
   const sections = [
-    { node: '#section-2 .block-1', trigger: '#section-2' },
+    // { node: '#section-2 .block-1', trigger: '#section-2' },
     { node: '#section-2 .block-2', trigger: '#section-2' },
     { node: '#section-2 .block-3__title', trigger: '#section-2 .block-2' },
     {
@@ -88,7 +94,7 @@ export function doAnimate(): void {
         start: 20,
       },
       duration: 1,
-      xPercent: 10,
+      xPercent: 20,
     })
   })
 

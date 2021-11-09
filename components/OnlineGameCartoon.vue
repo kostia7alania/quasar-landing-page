@@ -1,7 +1,7 @@
 <template>
   <div>
     <nuxt-img
-      class="tw-h-78 md:tw-h-auto tw-rounded-xl"
+      class="anim-batch tw-h-78 md:tw-h-auto tw-rounded-xl"
       src="/assets/images/online-game-cartoon-background.jpg"
       alt="online game cartoon background"
     />
@@ -9,6 +9,7 @@
     <!-- width="669" -->
     <svg
       class="
+        anim-batch
         tw-absolute tw-w-full tw-bottom-14 tw-right-12 tw-left-0 tw-mx-auto
       "
       height="163"
@@ -52,7 +53,7 @@
       "
     >
       <svg
-        class="tw-h-14 md:tw-h-24 lg:tw-h-32"
+        class="anim-batch tw-h-14 md:tw-h-24 lg:tw-h-32"
         viewBox="0 0 144 144"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -88,10 +89,10 @@
           tw-text-white tw-font-bold
         "
       >
-        <span class="tw-hidden md:tw-block dark:tw-text-gray-100"
+        <span class="anim-batch tw-hidden md:tw-block dark:tw-text-gray-100"
           >Play Poker</span
         >
-        <span class="tw-block md:tw-hidden dark:tw-text-gray-100"
+        <span class="anim-batch tw-block md:tw-hidden dark:tw-text-gray-100"
           >Online Game</span
         >
       </div>
@@ -110,12 +111,12 @@
         tw-font-bold
       "
     >
-      <span class="tw-hidden md:tw-block dark:tw-text-gray-300"
+      <span class="anim-batch tw-hidden md:tw-block dark:tw-text-gray-300"
         >Online Game</span
       >
-      <div class="tw-block md:tw-hidden dark:tw-text-gray-300">
+      <div class="anim-batch tw-block md:tw-hidden dark:tw-text-gray-300">
         <div>Play</div>
-        <div class="tw-w-24 tw-flex tw-justify-end">Poker</div>
+        <div class="anim-batch tw-w-24 tw-flex tw-justify-end">Poker</div>
       </div>
     </div>
 
@@ -123,6 +124,7 @@
 
     <svg
       class="
+        anim-batch
         tw-absolute tw-right-2
         sm:tw-right-5
         md:tw-right-7

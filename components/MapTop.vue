@@ -44,8 +44,9 @@
               class="leaflet-popup-component"
             >
               <Contacts
-                :is-hide-title="isHideTitle"
                 class="tw-py-4 tw-text-left tw-px-6"
+                :class="{ 'anim-batch': !isHideTitle }"
+                :is-hide-title="isHideTitle"
               />
             </l-popup>
           </l-marker>

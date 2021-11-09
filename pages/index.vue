@@ -76,7 +76,7 @@
         >
           <div
             class="
-              block-1
+              anim-batch
               tw-flex-1 tw-font-bold tw-text-xl
               sm:tw-text-4.5xl
               dark:tw-text-gray-100
@@ -107,6 +107,7 @@
         >
           <div
             class="
+              anim-batch
               block-3
               bg-dark-1
               tw-flex-1 tw-text-white tw-p-4
@@ -133,6 +134,7 @@
           </div>
           <div
             class="
+              anim-batch
               block-4
               bg-cotton-boll-2
               tw-flex-1
@@ -167,6 +169,7 @@
         <!-- sub section map -->
         <div
           class="
+            anim-batch
             bg-cotton-boll-2
             md:tw-flex
             tw-items-center tw-mt-3
@@ -193,7 +196,7 @@
             </div>
           </div>
           <div class="block-6 tw-flex-1 text-black-2 tw-m-4 md:tw-m-0">
-            <div class="tw-flex tw-justify-center">
+            <div class="anim-batch tw-flex tw-justify-center">
               <!-- <nuxt-img
                 class="tw-h-30"
                 src="/assets/images/office-location.png"
@@ -227,10 +230,17 @@
       "
       style="letter-spacing: -1.122px"
     >
-      <div class="content-width tw-flex tw-justify-center tw-flex-col tw-mx-4">
+      <div
+        class="
+          anim-batch
+          content-width
+          tw-flex tw-justify-center tw-flex-col tw-mx-4
+        "
+      >
         <div class="">
           <div
             class="
+              anim-batch
               block-1
               tw-text-center tw-font-bold tw-text-xl
               md:tw-text-3xl
@@ -242,6 +252,7 @@
           </div>
           <div
             class="
+              anim-batch
               block-2
               tw-text-center tw-m-auto
               text-black-2
@@ -271,6 +282,7 @@
         >
           <div
             class="
+              anim-batch
               tw-flex tw-items-center
               lg:tw-block
               tw-gap-x-4
@@ -288,6 +300,7 @@
 
             <div
               class="
+                anim-batch
                 section-3-block-1__text
                 lg:tw-absolute
                 tw-left-9 tw-bottom-8 tw-text-lg
@@ -302,6 +315,7 @@
           </div>
           <div
             class="
+              anim-batch
               tw-mr-1 tw-my-7 tw-flex-grow tw-flex-shrink-0
               lg:tw-flex
               tw-justify-end
@@ -324,10 +338,13 @@
             "
             style="flex-basis: 384px"
           >
-            <ChatSoftwareCartoonIcon class="tw-h-14 md:tw-h-28 lg:tw-h-32" />
+            <ChatSoftwareCartoonIcon
+              class="anim-batch tw-h-14 md:tw-h-28 lg:tw-h-32"
+            />
 
             <div
               class="
+                anim-batch
                 lg:tw-absolute
                 tw-left-9 tw-bottom-8 tw-text-lg
                 md:tw-text-xl
@@ -350,12 +367,12 @@
             "
             style="flex-basis: 655px"
           >
-            <ChatSoftwareCartoon class="tw-w-full" />
+            <ChatSoftwareCartoon class="anim-batch tw-w-full" />
           </div>
         </div>
 
         <!-- sub section -->
-        <div class="tw-flex tw-mt-12 tw-rounded-lg tw-relative">
+        <div class="anim-batch tw-flex tw-mt-12 tw-rounded-lg tw-relative">
           <OnlineGameCartoon />
         </div>
       </div>
@@ -384,6 +401,7 @@
       >
         <div
           class="
+            anim-batch
             tw-font-bold tw-text-xl
             md:tw-text-3xl
             lg:tw-text-4.5xl
@@ -401,10 +419,15 @@
           >
             <!-- item 1 -->
             <div
-              class="bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
+              class="anim-batch bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
               style="flex-basis: 400px"
             >
-              <div class="tw-flex-1 tw-flex tw-items-center tw-font-bold">
+              <div
+                class="
+                  anim-batch
+                  tw-flex-1 tw-flex tw-items-center tw-font-bold
+                "
+              >
                 <svg
                   width="60"
                   height="60"
@@ -482,6 +505,7 @@
 
                 <div
                   class="
+                    anim-batch
                     tw-text-lg
                     md:tw-text-xl
                     lg:tw-text-2xl
@@ -493,7 +517,13 @@
                 </div>
               </div>
               <div
-                class="tw-mt-3 text-gray-1 tw-text-base dark:tw-text-gray-300"
+                class="
+                  anim-batch
+                  tw-mt-3
+                  text-gray-1
+                  tw-text-base
+                  dark:tw-text-gray-300
+                "
               >
                 We only recruit people of various professions with the highest
                 talent to ensure that our products are high quality and it takes
@@ -502,10 +532,15 @@
             </div>
             <!-- item 2 -->
             <div
-              class="bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
+              class="anim-batch bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
               style="flex-basis: 400px"
             >
-              <div class="tw-flex-1 tw-flex tw-items-center tw-font-bold">
+              <div
+                class="
+                  anim-batch
+                  tw-flex-1 tw-flex tw-items-center tw-font-bold
+                "
+              >
                 <svg
                   class="fix-svg-icon"
                   width="60"
@@ -578,7 +613,13 @@
                 </div>
               </div>
               <div
-                class="tw-mt-3 text-gray-1 tw-text-base dark:tw-text-gray-300"
+                class="
+                  anim-batch
+                  tw-mt-3
+                  text-gray-1
+                  tw-text-base
+                  dark:tw-text-gray-300
+                "
               >
                 We have an international team, including staff from China,
                 Russia, Ukraine, Kazakhstan, India and other countries.
@@ -586,10 +627,15 @@
             </div>
             <!-- item 3 -->
             <div
-              class="bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
+              class="anim-batch bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
               style="flex-basis: 400px"
             >
-              <div class="tw-flex-1 tw-flex tw-items-center tw-font-bold">
+              <div
+                class="
+                  anim-batch
+                  tw-flex-1 tw-flex tw-items-center tw-font-bold
+                "
+              >
                 <svg
                   class="fix-svg-icon"
                   width="60"
@@ -663,6 +709,7 @@
 
                 <div
                   class="
+                    anim-batch
                     tw-text-lg
                     md:tw-text-xl
                     lg:tw-text-2xl
@@ -674,7 +721,13 @@
                 </div>
               </div>
               <div
-                class="tw-mt-3 text-gray-1 tw-text-base dark:tw-text-gray-300"
+                class="
+                  anim-batch
+                  tw-mt-3
+                  text-gray-1
+                  tw-text-base
+                  dark:tw-text-gray-300
+                "
               >
                 Employees from all over the world communicate closely through
                 online technology, overcome the difficulties of time differences
@@ -684,10 +737,15 @@
             </div>
             <!-- item 4 -->
             <div
-              class="bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
+              class="anim-batch bg-cotton-boll-2 tw-flex-1 tw-p-7 tw-rounded-lg"
               style="flex-basis: 400px"
             >
-              <div class="tw-flex-1 tw-flex tw-items-center tw-font-bold">
+              <div
+                class="
+                  anim-batch
+                  tw-flex-1 tw-flex tw-items-center tw-font-bold
+                "
+              >
                 <svg
                   class="fix-svg-icon"
                   width="60"
@@ -729,6 +787,7 @@
 
                 <div
                   class="
+                    anim-batch
                     tw-text-lg
                     md:tw-text-xl
                     lg:tw-text-2xl
@@ -768,6 +827,7 @@
           >
             <div
               class="
+                anim-batch
                 tw-flex-1 tw-font-bold tw-text-xl
                 md:tw-text-3xl
                 lg:tw-text-4.5xl
@@ -778,6 +838,7 @@
             </div>
             <div
               class="
+                anim-batch
                 tw-flex-1
                 text-black-2
                 tw-leading-6 tw-mt-3
@@ -799,18 +860,37 @@
           >
             <!-- item 1 -->
             <div
-              class="bg-cotton-boll-2 tw-flex-1 tw-pt-7 tw-px-7 tw-rounded-lg"
+              class="
+                item
+                on
+                mobile
+                bg-cotton-boll-2
+                tw-flex-1 tw-pt-7 tw-rounded-lg
+              "
               style="flex-basis: 288px"
             >
               <div class="tw-flex-1">
-                <div class="tw-font-bold tw-text-lg dark:tw-text-gray-100">
+                <div
+                  class="
+                    anim-batch
+                    tw-font-bold tw-text-lg tw-px-7
+                    dark:tw-text-gray-100
+                  "
+                >
                   David Herison
                 </div>
               </div>
-              <div class="text-gray-1 tw-text-sm dark:tw-text-gray-300">
+              <div
+                class="
+                  anim-batch
+                  text-gray-1
+                  tw-text-sm tw-px-7
+                  dark:tw-text-gray-300
+                "
+              >
                 Director of Public Relations
               </div>
-              <div class="tw-flex tw-justify-center tw-mt-3">
+              <div class="anim-batch tw-flex tw-justify-center tw-mt-3">
                 <nuxt-img
                   style="height: 261px"
                   src="/assets/images/team-david-herison.png"
@@ -820,18 +900,37 @@
             </div>
             <!-- item 2 -->
             <div
-              class="bg-cotton-boll-2 tw-flex-1 tw-pt-7 tw-px-7 tw-rounded-lg"
+              class="
+                item
+                on
+                mobile
+                bg-cotton-boll-2
+                tw-flex-1 tw-pt-7 tw-rounded-lg
+              "
               style="flex-basis: 288px"
             >
-              <div class="tw-flex-1">
-                <div class="tw-font-bold tw-text-lg dark:tw-text-gray-100">
+              <div class="anim-batch tw-flex-1">
+                <div
+                  class="
+                    anim-batch
+                    tw-font-bold tw-text-lg tw-px-7
+                    dark:tw-text-gray-100
+                  "
+                >
                   Liana Garsiz
                 </div>
               </div>
-              <div class="text-gray-1 tw-text-sm dark:tw-text-gray-300">
+              <div
+                class="
+                  anim-batch
+                  text-gray-1
+                  tw-text-sm tw-px-7
+                  dark:tw-text-gray-300
+                "
+              >
                 Director of the Development
               </div>
-              <div class="tw-flex tw-justify-center tw-mt-3">
+              <div class="anim-batch tw-flex tw-justify-center tw-mt-3">
                 <nuxt-img
                   style="height: 261px"
                   src="/assets/images/team-liana-garsiz.png"
@@ -841,18 +940,37 @@
             </div>
             <!-- item 3-->
             <div
-              class="bg-cotton-boll-2 tw-flex-1 tw-pt-7 tw-px-7 tw-rounded-lg"
+              class="
+                item
+                on
+                mobile
+                bg-cotton-boll-2
+                tw-flex-1 tw-pt-7 tw-rounded-lg
+              "
               style="flex-basis: 288px"
             >
               <div class="tw-flex-1">
-                <div class="tw-font-bold tw-text-lg dark:tw-text-gray-100">
+                <div
+                  class="
+                    anim-batch
+                    tw-font-bold tw-text-lg tw-px-7
+                    dark:tw-text-gray-100
+                  "
+                >
                   Anna Fernandez
                 </div>
               </div>
-              <div class="text-gray-1 tw-text-sm dark:tw-text-gray-300">
+              <div
+                class="
+                  anim-batch
+                  text-gray-1
+                  tw-text-sm tw-px-7
+                  dark:tw-text-gray-300
+                "
+              >
                 Director of the Marketing Department
               </div>
-              <div class="tw-flex tw-justify-center tw-mt-3">
+              <div class="anim-batch tw-flex tw-justify-center tw-mt-3">
                 <nuxt-img
                   style="height: 261px"
                   src="/assets/images/team-anna-fernandez.png"
@@ -895,6 +1013,7 @@
         >
           <div
             class="
+              anim-batch
               tw-text-left tw-font-bold tw-text-xl
               md:tw-text-3xl
               lg:tw-text-4.5xl
@@ -908,14 +1027,14 @@
             class="tw-text-left text-black-2 text-gray-1 dark:tw-text-gray-300"
             style="max-width: 748px"
           >
-            <div>Current Recruitment position:</div>
-            <div>Developers, marketing</div>
+            <div class="anim-batch">Current Recruitment position:</div>
+            <div class="anim-batch">Developers, marketing</div>
           </div>
         </div>
 
         <!-- row mobile -->
         <div class="ец-block md:tw-hidden tw-mt-9">
-          <div class="tw-text-blue-1 tw-font-bold">Our values</div>
+          <div class="anim-batch tw-text-blue-1 tw-font-bold">Our values</div>
         </div>
         <!-- row -->
         <div
@@ -939,10 +1058,14 @@
           </div>
           <div class="tw-overflow-hidden">
             <!-- card 1 -->
-            <div id="sub-section-1" class="tw-bg-white tw-rounded-lg tw-p-7">
+            <div
+              id="sub-section-1"
+              class="anim-batch tw-bg-white tw-rounded-lg tw-p-7"
+            >
               <JoinPerformanceCartoon />
               <div
                 class="
+                  anim-batch
                   tw-text-base
                   sm:tw-text-lg
                   md:tw-text-xl
@@ -956,10 +1079,11 @@
               </div>
             </div>
             <!-- card 2 -->
-            <div class="tw-bg-white tw-rounded-lg tw-p-7 tw-mt-9">
+            <div class="anim-batch tw-bg-white tw-rounded-lg tw-p-7 tw-mt-9">
               <JoinHappyLifeCartoon />
               <div
                 class="
+                  anim-batch
                   tw-text-base
                   sm:tw-text-lg
                   md:tw-text-xl
@@ -973,10 +1097,11 @@
               </div>
             </div>
             <!-- card 3 -->
-            <div class="tw-bg-white tw-rounded-lg tw-p-7 tw-mt-9">
+            <div class="anim-batch tw-bg-white tw-rounded-lg tw-p-7 tw-mt-9">
               <JoinChangeLifeCartoon />
               <div
                 class="
+                  anim-batch
                   tw-text-base
                   sm:tw-text-lg
                   md:tw-text-xl
@@ -991,21 +1116,24 @@
             </div>
 
             <!-- row mobile -->
-            <div class="ец-block md:tw-hidden tw-mt-9">
+            <div class="anim-batch md:tw-hidden tw-mt-9">
               <div class="tw-text-blue-1 tw-font-bold">
                 Open a multi-diverse office environment
               </div>
             </div>
 
             <!-- card 4 -->
-            <div id="sub-section-2" class="tw-mt-5 md:tw-mt-9 tw-rounded-lg">
+            <div
+              id="sub-section-2"
+              class="anim-batch tw-mt-5 md:tw-mt-9 tw-rounded-lg"
+            >
               <client-only>
                 <SliderSection />
               </client-only>
             </div>
 
             <!-- row mobile -->
-            <div class="ец-block md:tw-hidden tw-mt-9">
+            <div class="anim-batch md:tw-hidden tw-mt-9">
               <div class="tw-text-blue-1 tw-font-bold">
                 Everyone has a growing opportunity
               </div>
@@ -1015,6 +1143,7 @@
             <div
               id="sub-section-3"
               class="
+                anim-batch
                 tw-bg-white tw-p-6
                 md:tw-p-7
                 tw-mt-5
@@ -1024,6 +1153,7 @@
             >
               <div
                 class="
+                  anim-batch
                   tw-flex tw-items-center tw-text-lg
                   md:tw-text-xl
                   lg:tw-text-2xl
@@ -1031,9 +1161,19 @@
                 "
               >
                 <IconPromotion />
-                <div class="tw-ml-6 dark:tw-text-gray-100">Promotion</div>
+                <div class="anim-batch tw-ml-6 dark:tw-text-gray-100">
+                  Promotion
+                </div>
               </div>
-              <div class="tw-flex-1 text-gray-2 tw-mt-5 dark:tw-text-gray-300">
+              <div
+                class="
+                  anim-batch
+                  tw-flex-1
+                  text-gray-2
+                  tw-mt-5
+                  dark:tw-text-gray-300
+                "
+              >
                 Promotion is to organize future selection talents. Based on
                 position development channels, talent standards, promotion
                 process mechanisms, effectively identify, see and recognize the
@@ -1042,9 +1182,10 @@
               </div>
             </div>
             <!-- card 6 -->
-            <div class="tw-bg-white tw-p-7 tw-mt-9 tw-rounded-lg">
+            <div class="anim-batch tw-bg-white tw-p-7 tw-mt-9 tw-rounded-lg">
               <div
                 class="
+                  anim-batch
                   tw-flex tw-items-center tw-text-lg
                   md:tw-text-xl
                   lg:tw-text-2xl
@@ -1052,9 +1193,19 @@
                 "
               >
                 <IconProgress />
-                <div class="tw-ml-6 dark:tw-text-gray-100">Progress</div>
+                <div class="anim-batch tw-ml-6 dark:tw-text-gray-100">
+                  Progress
+                </div>
               </div>
-              <div class="tw-flex-1 text-gray-2 tw-mt-5 dark:tw-text-gray-300">
+              <div
+                class="
+                  anim-batch
+                  tw-flex-1
+                  text-gray-2
+                  tw-mt-5
+                  dark:tw-text-gray-300
+                "
+              >
                 We will make new people entering the company quickly integrate
                 into the company's life. In this process, all employees help
                 each other and make themselves better.
@@ -1062,7 +1213,7 @@
             </div>
 
             <!-- row mobile -->
-            <div class="ец-block md:tw-hidden tw-mt-9">
+            <div class="anim-batch md:tw-hidden tw-mt-9">
               <div class="tw-text-blue-1 tw-font-bold">
                 Company employee benefits
               </div>
@@ -1072,6 +1223,7 @@
             <div
               id="sub-section-4"
               class="
+                anim-batch
                 tw-bg-white tw-p-4
                 md:tw-p-5
                 lg:tw-p-7
@@ -1085,6 +1237,7 @@
             >
               <div
                 class="
+                  anim-batch
                   tw-flex tw-items-center tw-text-lg
                   md:tw-text-xl
                   lg:tw-text-2xl
@@ -1092,7 +1245,9 @@
                 "
               >
                 <IconTeamBuilding />
-                <div class="tw-ml-6 dark:tw-text-gray-100">Team building</div>
+                <div class="anim-batch tw-ml-6 dark:tw-text-gray-100">
+                  Team building
+                </div>
               </div>
             </div>
 
@@ -1101,6 +1256,7 @@
               <!-- card 8 -->
               <div
                 class="
+                  anim-batch
                   tw-bg-white tw-p-4
                   md:tw-p-5
                   lg:tw-p-7
@@ -1108,9 +1264,10 @@
                 "
               >
                 <div>
-                  <IconLunch />
+                  <IconLunch class="anim-batch" />
                   <div
                     class="
+                      anim-batch
                       tw-text-lg
                       md:tw-text-xl
                       lg:tw-text-2xl
@@ -1133,9 +1290,10 @@
                 "
               >
                 <div>
-                  <IconHotel />
+                  <IconHotel class="anim-batch" />
                   <div
                     class="
+                      anim-batch
                       tw-text-lg
                       md:tw-text-xl
                       lg:tw-text-2xl
@@ -1180,6 +1338,7 @@
           >
             <div
               class="
+                anim-batch
                 tw-text-left tw-font-bold tw-text-xl
                 md:tw-text-3xl
                 lg:tw-text-4.5xl
@@ -1214,7 +1373,7 @@
           src="/assets/images/map-bottom.png"
           alt="Contacts Map"
         /> -->
-        <MapTop class="tw-w-full map-bottom" is-active-popup />
+        <MapTop class="anim-batch tw-w-full map-bottom" is-active-popup />
       </div>
     </section>
 

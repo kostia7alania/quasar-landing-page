@@ -98,7 +98,6 @@
             tw-rounded
             tw-p-3
             tw-bg-modal-text-bg
-            tw-rounded-sm
             tw-border
             tw-border-modal-border
             tw-text-center

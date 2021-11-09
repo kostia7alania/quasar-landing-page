@@ -170,3 +170,9 @@ $primary-color: #416ff4;
 #section-3 {
   overflow: hidden;
 }
+
+.anim-batch-once,
+.anim-batch {
+  will-change: transform;
+  opacity: 0;
+}

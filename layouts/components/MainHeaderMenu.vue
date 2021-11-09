@@ -4,11 +4,11 @@
       class="tw-hidden md:tw-block navbar tw-font-bold"
       style="max-width: 1110px"
     >
-      <ul class="navbar-items tw-flex tw-gap-3 lg:tw-gap-8">
+      <ul class="header-menu__items tw-flex tw-gap-3 lg:tw-gap-8">
         <li v-for="{ title, id } in linksMap" :key="id" class="link-item">
           <a
             :class="{ 'link--active': id === activeLink }"
-            class="hover:tw-text-gray-500"
+            class="anim-batch-once hover:tw-text-gray-500"
             :href="id"
             @click.prevent="scrollToId(id)"
           >

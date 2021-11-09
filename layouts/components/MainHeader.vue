@@ -13,7 +13,7 @@
       <div class="logo-wrapper">
         <a href="#section-1" @click.prevent="scrollToId('#section-1')">
           <svg
-            class="logo"
+            class="anim-batch-once logo"
             width="42"
             viewBox="0 0 42 38"
             fill="none"
@@ -62,7 +62,7 @@
         tw-flex tw-items-center
       "
     >
-      <DarkToggle />
+      <DarkToggle class="anim-batch-once" />
       <HeaderJoinUs />
     </div>
   </header>

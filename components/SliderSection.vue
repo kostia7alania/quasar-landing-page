@@ -1,5 +1,5 @@
 <template>
-  <div class="swiper-container my-swiper tw-h-100">
+  <div class="swiper-container my-swiper lg:tw-h-100 tw-h-full">
     <div class="swiper-wrapper">
       <img class="swiper-slide" src="/assets/images/office-1.jpg" />
       <img class="swiper-slide" src="/assets/images/office-2.jpg" />
@@ -130,7 +130,7 @@ export default {
   height: 480px;
 }
 
-.swiper-slide {
+img.swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -140,15 +140,10 @@ export default {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  overflow: height;
-}
-
-.swiper-slide img {
-  display: block;
+  overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-  border-radius: 10px;
 }
 
 .swiper {

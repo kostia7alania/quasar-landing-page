@@ -176,3 +176,22 @@ $primary-color: #416ff4;
   will-change: transform;
   opacity: 0;
 }
+
+/* selection */
+::selection {
+  background: rgba(255, 109, 91, 0.99);
+  color: #fff;
+}
+.main-title::-moz-selection {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  background: transparent;
+}
+.main-title::selection {
+  text-shadow: none;
+  -webkit-text-stroke: 1px #000;
+  background: transparent;
+}
+::selection:window-inactive {
+  background: rgba(0, 0, 0, 0.3);
+}

@@ -1,5 +1,5 @@
 {
-  "name": "nuxt2",
+  "name": "h5-official-site",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -57,5 +57,7 @@
     "sass": "^1.37.5",
     "sass-loader": "^10.2.0",
     "surge": "^0.23.0"
-  }
+  },
+  "author": "kostia7alania",
+  "description": "H5 Official Site using Nuxt 2, Composition API, Typescript"
 }

@@ -65,6 +65,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/pwa',
     '@nuxt/image',
     'nuxt-leaflet',
     ['vue-scrollto/nuxt', { duration: 300 }],
@@ -114,6 +115,7 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
+      name: 'H5 Official Site 🎉',
       lang: 'en',
     },
   },

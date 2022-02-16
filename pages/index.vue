@@ -22,7 +22,7 @@
           dark:tw-text-gray-100
         "
       >
-        Fire Phoenix Trading&nbsp;L.L.C
+        OLA VAMOS Technology&nbsp;L.L.C
       </div>
       <div class="main-description tw-transform tw-translate-x-full">
         <div
@@ -1393,7 +1393,7 @@
           lg:tw-text-lg
         "
       >
-        © 2021 Fire Phoenix Trading L.L.C, Inc. All rights reserved.
+        © 2022 OLA VAMOS Technology LLC, Inc. All rights reserved.
       </div>
     </footer>
   </div>

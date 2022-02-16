@@ -7,7 +7,7 @@ export default {
     interval: 2000,
   },
   server: {
-    host: '192.168.1.237',
+    host: '0.0.0.0',
   },
   // router: {
   //   base: '/',
@@ -44,7 +44,7 @@ export default {
   // },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'H5 Official Site',
+    title: 'OLA VAMOS Technology LLC',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -115,7 +115,7 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      name: 'H5 Official Site 🎉',
+      name: 'OLA VAMOS Technology LLC 🎉',
       lang: 'en',
     },
   },
